@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile"
+    android:focusableInTouchMode="true"
+    android:background="#f4f4f4">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#fa334a"
+        android:id="@+id/epTopView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:text="Edit Profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:textColor="#fff"/>
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/epBackButt"
+            android:textAllCaps="false"
+            android:background="@drawable/back_butt"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:text="Save"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:id="@+id/epSaveButt"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="11dp"
+            android:layout_alignBaseline="@+id/textView"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignParentEnd="true"
+            android:textSize="12sp"
+            android:textStyle="normal"/>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/epTopView"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionDone"
+                    android:ems="10"
+                    android:id="@+id/epUsernameTxt"
+                    android:textColor="#555"
+                    android:textSize="11sp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_corner"
+                    android:paddingLeft="5dp"
+                    android:hint="type a username"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/textView16"
+                    android:layout_alignTop="@+id/textView16"
+                    android:layout_alignBottom="@+id/textView16"/>
+
+                <TextView
+                    android:text="Username: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="14dp"
+                    android:id="@+id/textView16"
+                    android:textStyle="normal|bold"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"/>
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="Full Name: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:id="@+id/textView17"
+                    android:textStyle="normal|bold"
+                    android:gravity="center_vertical"
+                    android:layout_below="@+id/textView16"
+                    android:layout_alignStart="@+id/textView16"/>
+
+
+                <EditText
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionDone"
+                    android:ems="10"
+                    android:id="@+id/epFullnameTxt"
+                    android:textColor="#555"
+                    android:textSize="11sp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_corner"
+                    android:paddingLeft="5dp"
+                    android:hint="type your full name"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/textView17"
+                    android:layout_alignTop="@+id/textView17"
+                    android:layout_alignBottom="@+id/textView17"/>
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="Website: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:id="@+id/textView18"
+                    android:textStyle="normal|bold"
+                    android:gravity="center_vertical"
+                    android:layout_below="@+id/textView17"
+                    android:layout_alignStart="@+id/textView17"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:imeOptions="actionDone"
+                    android:ems="10"
+                    android:id="@+id/epWebsiteTxt"
+                    android:textColor="#555"
+                    android:textSize="11sp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_corner"
+                    android:paddingLeft="5dp"
+                    android:hint="ex: http://mywebsite.com"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/textView18"
+                    android:layout_alignTop="@+id/textView18"
+                    android:layout_alignBottom="@+id/textView18"
+                    android:layout_alignStart="@+id/epFullnameTxt"
+                    android:inputType="textWebEmailAddress"/>
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="About me: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:id="@+id/textView20"
+                    android:textStyle="normal|bold"
+                    android:gravity="center_vertical"
+                    android:layout_below="@+id/textView18"
+                    android:layout_alignStart="@+id/textView18"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/epAboutTxt"
+                    android:textColor="#555"
+                    android:textSize="11sp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/rounded_corner"
+                    android:paddingLeft="5dp"
+                    android:hint="type something about you"
+                    android:gravity="top"
+                    android:paddingTop="5dp"
+                    android:layout_alignBaseline="@+id/textView20"
+                    android:layout_alignBottom="@+id/textView20"
+                    android:layout_alignStart="@+id/epAvatarImg"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/epAvatarImg"
+                    android:src="@drawable/logo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/epAboutTxt"
+                    android:layout_alignStart="@+id/epWebsiteTxt"
+                    android:layout_marginTop="21dp"/>
+
+                <TextView
+                    android:text="Photo: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:id="@+id/textView21"
+                    android:textStyle="normal|bold"
+                    android:gravity="center_vertical"
+                    android:layout_alignTop="@+id/epAvatarImg"
+                    android:layout_alignStart="@+id/textView20"/>
+
+                <TextView
+                    android:text="Tap to change photo"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView22"
+                    android:textSize="10sp"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/epAvatarImg"
+                    android:layout_toEndOf="@+id/textView17"/>
+
+                <Button
+                    android:text="Reset Password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/epResetPasswordButt"
+                    android:layout_below="@+id/textView22"
+                    android:layout_alignStart="@+id/textView21"
+                    android:layout_marginTop="32dp"
+                    android:textColor="@color/main_color"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textAllCaps="false"/>
+
+
+                <Button
+                    android:text="Read Terms of Service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/epTOSbutt"
+                    android:textColor="#555"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textAllCaps="false"
+                    android:layout_below="@+id/epResetPasswordButt"
+                    android:layout_alignStart="@+id/epResetPasswordButt"
+                    android:layout_marginBottom="20dp"/>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

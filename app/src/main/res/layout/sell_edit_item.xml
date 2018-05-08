@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sell_edit_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="SellEditItem"
+    android:focusableInTouchMode="true"
+    android:background="#f6f6f6">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="#fa334a"
+        android:id="@+id/sellCatTopView"
+        android:layout_alignParentEnd="true">
+
+
+        <TextView
+            android:text="Sell an item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sellTitleTxt"
+            android:textColor="#fff"
+            android:textStyle="normal|bold"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/sellSubmitButt"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/transparent"
+            android:textColor="#fff"
+            android:text="Submit"
+            android:layout_marginLeft="5dp"
+            android:textAllCaps="false"
+            android:textSize="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+        <Button
+            android:layout_height="44dp"
+            android:id="@+id/sellBackButt"
+            android:layout_alignBaseline="@+id/sellTitleTxt"
+            android:layout_alignBottom="@+id/sellTitleTxt"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="Cancel"
+            android:textSize="12sp"
+            android:textColor="#fff"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:layout_width="50dp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sellCatTopView"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/sellTabBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="650dp">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Add images (1st one required)"
+                    android:textColor="#777"
+                    android:textSize="14sp"
+                    android:textStyle="normal|bold" />
+
+                <ImageView
+                    android:id="@+id/sellImage1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="32dp"
+                    android:scaleType="centerCrop"
+                    android:tag="1"
+                    app:srcCompat="@drawable/add_image" />
+
+                <ImageView
+                    android:id="@+id/sellImage2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignTop="@+id/sellImage1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toEndOf="@+id/sellImage1"
+                    android:scaleType="centerCrop"
+                    android:tag="2"
+                    app:srcCompat="@drawable/add_image" />
+
+                <ImageView
+                    android:id="@+id/sellImage3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignTop="@+id/sellImage2"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toEndOf="@+id/sellImage2"
+                    android:scaleType="centerCrop"
+                    android:tag="3"
+                    app:srcCompat="@drawable/add_image" />
+
+                <ImageView
+                    android:id="@+id/sellAdImg1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/sellImage1"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/sellAdImg2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignStart="@+id/sellImage2"
+                    android:layout_alignTop="@+id/sellImage2"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/sellAdImg3"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignStart="@+id/sellImage3"
+                    android:layout_alignTop="@+id/sellImage3"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView5"
+                    android:layout_alignBottom="@+id/textView5"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Video"
+                    android:textAlignment="center"
+                    android:textColor="#777"
+                    android:textStyle="normal|bold" />
+
+                <ImageView
+                    android:id="@+id/sellVideoImg"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignEnd="@+id/textView7"
+                    android:layout_alignTop="@+id/sellImage3"
+                    android:layout_marginLeft="8dp"
+                    android:scaleType="centerCrop"
+                    android:tag="4"
+                    app:srcCompat="@drawable/add_video_image" />
+
+                <ImageView
+                    android:id="@+id/sellAdVideoImg"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignStart="@+id/sellVideoImg"
+                    android:layout_alignTop="@+id/sellVideoImg"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="123dp"
+                    android:text="DETAILS"
+                    android:textColor="#777"
+                    android:textStyle="normal|bold" />
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@+id/textView10"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView8"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/category_icon" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/sellCategoriesButt"
+                    android:layout_below="@+id/textView8"
+                    android:layout_toEndOf="@+id/imageView13"
+                    android:gravity="center_vertical"
+                    android:text="Category:"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/sellCategoriesButt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_alignEnd="@+id/sellVideoImg"
+                    android:layout_below="@+id/textView8"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toEndOf="@+id/textView10"
+                    android:background="@android:color/transparent"
+                    android:text="Choose one..."
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="#555"
+                    android:textSize="12sp"
+                    android:textStyle="normal|bold" />
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_above="@+id/textView11"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/textView9"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/description_icon" />
+
+                <EditText
+                    android:id="@+id/sellAdTitleTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_alignEnd="@+id/sellCategoriesButt"
+                    android:layout_alignStart="@+id/sellImage2"
+                    android:layout_alignTop="@+id/textView9"
+                    android:layout_marginRight="10dp"
+                    android:background="#fff"
+                    android:ems="10"
+                    android:hint="Title of the item you're selling"
+                    android:imeOptions="actionDone"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:textColor="#555"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_alignStart="@+id/textView9"
+                    android:layout_below="@+id/textView9"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Price:"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_alignStart="@+id/textView11"
+                    android:layout_below="@+id/sellPriceTxt"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Condition:"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@+id/textView12"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/textView12"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/price_icon" />
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@+id/textView11"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/textView11"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/condition_icon" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/imageView14"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/imageView15"
+                    android:gravity="center_vertical"
+                    android:text="Title:"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/sellNewButt"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView12"
+                    android:layout_alignStart="@+id/sellCategoriesButt"
+                    android:layout_alignTop="@+id/textView12"
+                    android:layout_marginLeft="5dp"
+                    android:background="#777"
+                    android:text="New"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/sellUsedButt"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/sellNewButt"
+                    android:layout_alignTop="@+id/sellNewButt"
+                    android:layout_toEndOf="@+id/sellNewButt"
+                    android:background="#bababa"
+                    android:text="Used"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/textView12"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/imageView16"
+                    android:gravity="center_vertical"
+                    android:text="Description:"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignBottom="@+id/textView13"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/textView13"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/description_icon" />
+
+                <EditText
+                    android:id="@+id/sellPriceTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_alignEnd="@+id/sellAdTitleTxt"
+                    android:layout_alignStart="@+id/sellAdTitleTxt"
+                    android:layout_below="@+id/sellAdTitleTxt"
+                    android:layout_marginTop="10dp"
+                    android:background="#fff"
+                    android:ems="10"
+                    android:hint="Set a price for your item"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:textColor="#555"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/sellDescriptionTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignEnd="@+id/sellPriceTxt"
+                    android:layout_below="@+id/textView13"
+                    android:layout_toEndOf="@+id/imageView16"
+                    android:background="#fff"
+                    android:gravity="top"
+                    android:hint="Type a description of your item"
+                    android:imeOptions="normal"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="#333"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/sellDeleteAdButt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignStart="@+id/sellChooseLocationButt"
+                    android:layout_below="@+id/sellChooseLocationButt"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="50dp"
+                    android:backgroundTint="@color/main_color"
+                    android:text="Delete Item"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/sellChooseLocationButt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/sellDescriptionTxt"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/com_facebook_blue"
+                    android:text="Choose location (optional)*"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sellChooseLocationButt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="* if you don't choose a location, your current one will be set by default "
+                    android:textAlignment="textStart"
+                    android:textSize="11sp"
+                    android:textStyle="italic" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/sellCategoriesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2000dp"
+        android:background="#fff">
+
+        <ListView
+            android:id="@+id/sellCategListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/sellCategTopView"
+            android:choiceMode="singleChoice"
+            android:listSelector="#eee" />
+
+        <RelativeLayout
+            android:id="@+id/sellCategTopView"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#fa334a">
+
+
+            <Button
+                android:id="@+id/sellCategDoneButt"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:text="Done"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/sellCategTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:text="Choose category"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textStyle="normal|bold" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <!-- TAB BAR -->
+
+
+</RelativeLayout>

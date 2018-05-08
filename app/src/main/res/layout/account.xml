@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Account">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="#fa334a"
+        android:id="@+id/accTopView">
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/accChatButt"
+            android:background="@drawable/chat_butt"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:text="loading..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/accUsernameTxt"
+            android:layout_alignParentBottom="true"
+            android:textColor="#fff"
+            android:textStyle="normal|bold"
+            android:gravity="center_vertical"/>
+
+
+    </RelativeLayout>
+
+
+    <!-- TAB BAR -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/sellTabBar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_one"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_home"
+            android:layout_gravity="center_horizontal"
+            android:text="Browse"
+            android:textColor="#555"
+            android:backgroundTint="#555"
+            android:paddingTop="40dp"
+            android:textSize="8dp" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_two"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_likes"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="My Likes"
+            android:textSize="8dp"
+            android:backgroundTint="#555"
+            android:textColor="#555"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_three"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_sell"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="Sell"
+            android:textSize="8dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#555"
+            android:backgroundTint="#555"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_four"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_activity"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="Activity"
+            android:textSize="8dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#555"
+            android:textColor="#555"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_five"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_account"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="Account"
+            android:textSize="8dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#fa334a"
+            android:backgroundTint="#fa334a"/>
+    </LinearLayout>
+
+    <TextView
+        android:text="loading..."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/accAvatarImg"
+        android:layout_toEndOf="@+id/accAvatarImg"
+        android:id="@+id/accFullNameTxt"
+        android:textStyle="normal|bold"
+        android:textColor="#333"
+        android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        android:maxLines="1"/>
+
+    <TextView
+        android:text="Joined:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accFullNameTxt"
+        android:layout_alignStart="@+id/accFullNameTxt"
+        android:id="@+id/accJoinedTxt"
+        android:textSize="11sp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:text="Verified:"
+        android:textSize="11sp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accJoinedTxt"
+        android:layout_alignStart="@+id/accJoinedTxt"
+        android:id="@+id/accVerifiedTxt"/>
+
+    <Button
+        android:text="Feedbacks"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/accAvatarImg"
+        android:layout_alignStart="@+id/accAvatarImg"
+        android:id="@+id/accFeedbacksButt"
+        android:textAllCaps="false"
+        android:backgroundTint="#555"
+        android:textColor="#fff"
+        android:textSize="11sp"
+        android:layout_marginTop="10dp"
+        android:layout_height="38dp"/>
+
+    <Button
+        android:text="Edit profile"
+        android:layout_width="wrap_content"
+        android:id="@+id/accEditProfileButt"
+        android:textAllCaps="false"
+        android:backgroundTint="#555"
+        android:textColor="#fff"
+        android:textSize="11sp"
+        android:layout_alignBottom="@+id/accFeedbacksButt"
+        android:layout_toEndOf="@+id/accFeedbacksButt"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/accFeedbacksButt"
+        android:layout_height="38dp"/>
+
+    <Button
+        android:text="Logout"
+        android:layout_width="wrap_content"
+        android:id="@+id/accLogoutButt"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/main_color"
+        android:textColor="#fff"
+        android:textSize="11sp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBottom="@+id/accEditProfileButt"
+        android:layout_toEndOf="@+id/accEditProfileButt"
+        android:layout_marginStart="9dp"
+        android:layout_alignTop="@+id/accEditProfileButt"
+        android:layout_height="38dp"/>
+
+    <TextView
+        android:text="MY ADS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accEditProfileButt"
+        android:layout_marginTop="11dp"
+        android:id="@+id/textView21"
+        android:textColor="#333"
+        android:textStyle="normal|bold"
+        android:textSize="12sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView21"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/sellTabBar"
+        android:id="@+id/myAdsListView"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:divider="#e5e5e5"
+        android:dividerHeight="1dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/accAvatarImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/logo"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/accTopView"
+        android:layout_alignParentStart="true"/>
+
+</RelativeLayout>

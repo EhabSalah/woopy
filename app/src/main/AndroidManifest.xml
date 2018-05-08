@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="woopy.domain.com.woopy">
+
+    <!-- permissions -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <!-- For Push Notifications -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+    <!-- IMPORTANT: Replace "woopy.domain.com.woopy" with your own app's package name! -->
+    <permission
+        android:name="woopy.domain.com.woopy.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="woopy.domain.com.woopy.permission.C2D_MESSAGE" />
+
+
+    <application
+        android:name=".Configs"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light">
+
+
+        <!-- Splash screen -->
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- file provider -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+        <!-- For Google Maps -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
+        <!-- For Facebook SDK -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+
+        <!-- IMPORTANT: Replace "478517440140" with your own GCM Sender Id! -->
+        <meta-data
+            android:name="com.parse.push.gcm_sender_id"
+            android:value="id:478517440140" />
+
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+
+                <!-- IMPORTANT: Replace "woopy.domain.com.woopy" with your own app's package name! -->
+                <category android:name="woopy.domain.com.woopy" />
+
+
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+                <action android:name="com.parse.push.intent.DELETE" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- Other Activities -->
+        <activity android:name=".Home" />
+        <activity android:name=".TermsOfUse" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".Login" />
+        <activity android:name=".Wizard" />
+        <activity android:name=".AdsList" />
+        <activity android:name=".DistanceMap" />
+        <activity android:name=".Categories" />
+        <activity android:name=".SortBy" />
+        <activity android:name=".ReportAdOrUser" />
+        <activity android:name=".Comments" />
+        <activity android:name=".SellEditItem" />
+        <activity android:name=".AdDetails" />
+        <activity android:name=".WatchVideo" />
+        <activity android:name=".FullScreenPreview" />
+        <activity android:name=".SendFeedback" />
+        <activity android:name=".Chats" />
+        <activity android:name=".InboxActivity" />
+        <activity android:name=".Account" />
+        <activity android:name=".Feedbacks" />
+        <activity android:name=".EditProfile" />
+        <activity android:name=".UserProfile" />
+        <activity android:name=".MyLikes" />
+        <activity android:name=".ActivityScreen" />
+        <activity android:name=".MapScreen" />
+
+
+    </application>
+
+</manifest>

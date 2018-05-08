@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/send_feedback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SendFeedback"
+    android:focusableInTouchMode="true"
+    android:background="#eeeeee">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#fa334a"
+        android:id="@+id/sfTopView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:text="loading..."
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sfUsernameTxt"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textStyle="normal"
+            android:textColor="#fff"
+            android:textSize="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/sfBackButt"
+            android:textAllCaps="false"
+            android:background="@drawable/back_butt"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:text="Send"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:id="@+id/sfSendButt"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="9dp"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:layout_alignTop="@+id/sfBackButt"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:text="Send Feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sfTxt"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:textColor="#fff"
+            android:layout_alignBaseline="@+id/sfSendButt"
+            android:layout_alignBottom="@+id/sfSendButt"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:text="TAP A DOT TO RATE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sfTopView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:id="@+id/textView14"
+        android:textStyle="normal|bold"
+        android:textSize="12sp"
+        android:textColor="#777"/>
+
+    <RelativeLayout
+        android:id="@+id/starsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/textView14"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/starButt1"
+            android:background="@drawable/empty_star"
+            android:layout_weight="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/starButt2"
+            android:background="@drawable/empty_star"
+            android:layout_weight="1"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/starButt1"/>
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/starButt3"
+            android:background="@drawable/empty_star"
+            android:layout_weight="1"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/starButt2"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/empty_star"
+            android:layout_weight="1"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/starButt2"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/starButt4"
+            android:background="@drawable/empty_star"
+            android:layout_weight="1"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/starButt3"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/starButt5"
+            android:background="@drawable/empty_star"
+            android:layout_weight="1"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/starButt4"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:text="WRITE A SHORT REVIEW"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView17"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/starsLayout"
+        android:layout_centerHorizontal="true"
+        android:textStyle="normal|bold"
+        android:textColor="#777"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_below="@+id/textView17"
+        android:id="@+id/sfReviewTxt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="#fff"
+        android:textSize="12sp"
+        android:textColor="#222"
+        android:gravity="top|center_vertical"
+        android:layout_marginTop="5dp"/>
+
+
+</RelativeLayout>

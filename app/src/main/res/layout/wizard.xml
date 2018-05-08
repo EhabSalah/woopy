@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Wizard"
+    android:background="#333">
+
+        <Button
+            android:id="@+id/wDismissButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dismiss_butt" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true" />
+
+        <Button
+            android:text="By signing up you agree to our Terms of Service "
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tosButt"
+            android:layout_marginBottom="25dp"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:layout_alignParentStart="true"
+            android:textSize="10sp"
+            android:textColor="#f1f1f1"
+            android:layout_marginTop="5dp" />
+
+        <ImageView
+            android:layout_width="100dp"
+            app:srcCompat="@drawable/dots1"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/dotsImg"
+            android:layout_height="20dp" />
+
+        <Button
+            android:layout_width="260dp"
+            android:layout_height="44dp"
+            android:id="@+id/facebookButt"
+            android:textAllCaps="false"
+            android:background="@drawable/facebook_butt"
+            android:layout_above="@+id/signupButt"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:text="Sign up or Login in with Email "
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/signupButt"
+            android:textAllCaps="false"
+            android:layout_above="@+id/tosButt"
+            android:layout_alignStart="@+id/facebookButt"
+            android:background="#f1f1f1"
+            android:layout_marginTop="10dp" />
+
+
+</RelativeLayout>

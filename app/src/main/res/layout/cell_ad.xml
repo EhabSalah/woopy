@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:id="@+id/cadCellLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_corner"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="220dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            app:srcCompat="@drawable/logo"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/cadImage"
+            android:scaleType="centerCrop"
+            android:layout_height="100dp"
+            android:cropToPadding="true"/>
+
+        <TextView
+            android:text="loading..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="105dp"
+            android:id="@+id/cadAdTitleTxt"
+            android:textSize="11sp"
+            android:textColor="#444"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <TextView
+            android:text="$loading..."
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cadPriceTxt"
+            android:layout_below="@+id/cadAdTitleTxt"
+            android:layout_alignParentStart="true"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="5dp"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cadAvatarImg"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/logo"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_below="@+id/cadPriceTxt"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:text="johndoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cadUsernametxt"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textColor="#888"
+            android:textSize="8sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignTop="@+id/cadAvatarImg"
+            android:layout_alignEnd="@+id/cadAdTitleTxt"
+            android:layout_toEndOf="@+id/cadAvatarImg"
+            android:paddingLeft="5dp"/>
+
+        <ImageView
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/small_time_icon"
+            android:id="@+id/cadSmallTimeIcon"
+            android:layout_below="@+id/cadUsernametxt"
+            android:layout_alignStart="@+id/cadUsernametxt"
+            android:layout_width="20dp"/>
+
+        <TextView
+            android:text="loading..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cadDateTxt"
+            android:layout_alignBottom="@+id/cadSmallTimeIcon"
+            android:layout_toEndOf="@+id/cadSmallTimeIcon"
+            android:layout_below="@+id/cadUsernametxt"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:textSize="8dp"
+            android:singleLine="true"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:id="@+id/cadLine"
+            android:background="@color/cardview_shadow_start_color"
+            android:layout_below="@+id/cadAvatarImg"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:layout_height="1dp">
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/cadLikeButt"
+            android:background="@drawable/like_butt"
+            android:layout_below="@+id/cadLine"
+            android:layout_alignStart="@+id/cadAvatarImg"
+            android:layout_marginTop="5dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"/>
+
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cadLikeButt"
+            android:layout_toEndOf="@+id/cadAvatarImg"
+            android:id="@+id/cadLikesTxt"
+            android:layout_alignBottom="@+id/cadLikeButt"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="8sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="-5dp"/>
+
+
+        <Button
+            android:id="@+id/cadCommentsButt"
+            android:background="@drawable/comments_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignTop="@+id/cadLikesTxt"
+            android:layout_toEndOf="@+id/cadSmallTimeIcon"/>
+        <TextView
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cadCommentsTxt"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="8sp"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@+id/cadDateTxt"
+            android:layout_alignBottom="@+id/cadCommentsButt"
+            android:layout_alignTop="@+id/cadCommentsButt"
+            android:layout_marginLeft="-5dp"/>
+
+
+        <Button
+            android:id="@+id/cadOptionsButt"
+            android:text="•••"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@android:color/transparent"
+            android:layout_alignTop="@+id/cadCommentsTxt"
+            android:layout_alignEnd="@+id/cadAdTitleTxt"
+            android:textColor="#888"/>
+
+    </RelativeLayout>
+</RelativeLayout>

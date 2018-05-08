@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusableInTouchMode="true"
+                tools:context=".Home">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="#fa334a"
+        android:id="@+id/hTopView">
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/hChatButt"
+            android:background="@drawable/chat_butt"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:ems="10"
+            android:id="@+id/hSearchTxt"
+            android:background="#82555555"
+            android:layout_marginRight="10dp"
+            android:textSize="12sp"
+            android:textColor="#fff"
+            android:hint="Search on woopy..."
+            android:textColorHint="#f2f2f2"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:imeOptions="actionSearch"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/hCancelButt"
+            android:layout_marginLeft="10dp"
+            android:inputType="none"/>
+
+        <Button
+            android:text="Cancel"
+            android:layout_width="60dp"
+            android:layout_height="44dp"
+            android:id="@+id/hCancelButt"
+            android:textAllCaps="false"
+            android:background="@android:color/transparent"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:layout_alignTop="@+id/hChatButt"
+            android:layout_toStartOf="@+id/hChatButt"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/hCategoriesGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/admobBanner"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/hTopView"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:verticalSpacing="10dp" />
+
+
+    <!-- TAB BAR -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/sellTabBar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_one"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_home"
+            android:layout_gravity="center_horizontal"
+            android:text="Browse"
+            android:textColor="#fa334a"
+            android:backgroundTint="#fa334a"
+            android:paddingTop="40dp"
+            android:textSize="8dp" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_two"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_likes"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="My Likes"
+            android:textSize="8dp"
+            android:backgroundTint="#555"
+            android:textColor="#555"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_three"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_sell"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="Sell"
+            android:textSize="8dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#555"
+            android:backgroundTint="#555"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_four"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_activity"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="Activity"
+            android:textSize="8dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#555"
+            android:textColor="#555"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_five"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_account"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="Account"
+            android:textSize="8dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#555"
+            android:backgroundTint="#555"/>
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/admobBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ADMOB_BANNER_UNIT_ID"
+        android:layout_above="@+id/sellTabBar"
+        android:layout_centerHorizontal="true">
+    </com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>

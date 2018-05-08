@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ads_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".AdsList"
+    android:background="#eee">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="#fa334a"
+        android:id="@+id/alTopView"
+        android:layout_alignParentEnd="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:ems="10"
+            android:id="@+id/alSearchTxt"
+            android:background="#82555555"
+            android:layout_marginRight="10dp"
+            android:textSize="12sp"
+            android:textColor="#fff"
+            android:hint="Search on woopy..."
+            android:textColorHint="#f2f2f2"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:imeOptions="actionSearch"
+            android:layout_centerVertical="true"
+            android:inputType="none"
+            android:layout_toStartOf="@+id/alCancelButt"
+            android:layout_marginLeft="48dp"/>
+
+        <Button
+            android:text="Cancel"
+            android:layout_width="60dp"
+            android:layout_height="44dp"
+            android:id="@+id/alCancelButt"
+            android:textAllCaps="false"
+            android:background="@android:color/transparent"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:layout_alignTop="@+id/alChatButt"
+            android:layout_toStartOf="@+id/alChatButt"
+            android:visibility="invisible"/>
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/alBackButt"
+            android:background="@drawable/back_butt"
+            android:layout_alignTop="@+id/alCancelButt"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/alChatButt"
+            android:background="@drawable/chat_butt"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/alOptionsLayout"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/alNoResultsLayout"
+        android:visibility="invisible">
+
+        <ImageView
+            ads:srcCompat="@drawable/no_search"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/imageView10"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+
+        <TextView
+            android:text="Your search did not match any listings. Try another search?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alNoSearchTxt"
+            android:layout_below="@+id/imageView10"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textColor="#555"
+            android:textStyle="normal|bold"/>
+    </RelativeLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/admobBanner"
+        android:id="@+id/alAdsGridView"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/alOptionsLayout"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="10dp"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/admobBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ADMOB_BANNER_UNIT_ID">
+    </com.google.android.gms.ads.AdView>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/alOptionsLayout"
+        android:background="@color/com_facebook_button_border_color_focused"
+        android:layout_below="@+id/alTopView"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            ads:srcCompat="@drawable/small_loc_icon"
+            android:layout_alignParentStart="true"
+            android:id="@+id/imageView7"
+            android:layout_width="16dp"
+            android:layout_height="16dp"/>
+
+        <TextView
+            android:text="loading..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alDistanceTxt"
+            android:textSize="11sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/alCityCountryButt"
+            android:layout_toEndOf="@+id/imageView7"
+            android:singleLine="true"
+            android:maxLines="1"/>
+
+
+        <ImageView
+            ads:srcCompat="@drawable/small_sort_icon"
+            android:id="@+id/imageView9"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/alSortByButt"/>
+
+        <TextView
+            android:text="SORT BY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alsortlabel"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:layout_alignBottom="@+id/imageView8"
+            android:layout_alignEnd="@+id/alSortByButt"
+            android:layout_toEndOf="@+id/imageView9"/>
+
+        <Button
+            android:text="Recent"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/alSortByButt"
+            android:layout_height="36dp"
+            android:textAllCaps="false"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:textAlignment="viewStart"
+            android:textColor="#333"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/alLine2"
+            android:paddingLeft="5dp"
+            android:layout_width="80dp"/>
+
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#888"
+            android:id="@+id/alLine1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/alDistanceTxt">
+
+        </RelativeLayout>
+
+        <ImageView
+            ads:srcCompat="@drawable/small_category"
+            android:id="@+id/imageView8"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/alDistanceTxt"
+            android:layout_marginStart="5dp"/>
+
+        <Button
+            android:text="All"
+            android:id="@+id/alCategoryButt"
+            android:layout_height="36dp"
+            android:textAllCaps="false"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:textAlignment="viewStart"
+            android:textColor="#333"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/imageView8"
+            android:paddingLeft="5dp"
+            android:layout_width="110dp"/>
+
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#888"
+            android:id="@+id/alLine2"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/alCategoryButt"
+            android:layout_marginLeft="10dp">
+
+        </RelativeLayout>
+
+        <TextView
+            android:text="CATEGORY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alcatlabel"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:layout_toEndOf="@+id/imageView8"
+            android:layout_alignBottom="@+id/imageView8"/>
+
+        <Button
+            android:text="New York, USA"
+            android:id="@+id/alCityCountryButt"
+            android:layout_height="36dp"
+            android:textAllCaps="false"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:textAlignment="viewStart"
+            android:textColor="#333"
+            android:paddingLeft="5dp"
+            android:layout_width="100dp"
+            android:layout_below="@+id/alDistanceTxt"
+            android:layout_alignParentStart="true"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

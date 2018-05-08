@@ -1,0 +1,26 @@
+<resources xmlns:xliff="http://schemas.android.com/tools">
+
+    <!-- IMPORTANT: REPLACE THIS STRING WITH THE NEW NAME YOU'LL GIVE TO THIS APP -->
+    <string name="app_name">woopy</string>
+
+
+    <!-- IMPORTANT: REPLACE THE STRING BELOW WITH YOUR OWN BANNER UNIT ID YOU'LL GET FROM http://apps.admob.com -->
+    <string name="ADMOB_BANNER_UNIT_ID">ca-app-pub-9733347540588953/7805958028</string>
+
+
+    <!-- IMPORTANT: REPLACE THE STRING BELOW WITH YOUR OWN FACEBOOK APP ID YOU'LL GET ON https://developers.facebook.com/apps/ -->
+    <string name="facebook_app_id">1373896799328580</string>
+
+
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_launch_screen">LaunchScreen</string>
+
+
+    <string name="page1">page 1</string>
+    <string name="page2">page 2</string>
+    <string name="page3">Page 3</string>
+    <string name="title_activity_image_preview">ImagePreview</string>
+
+</resources>

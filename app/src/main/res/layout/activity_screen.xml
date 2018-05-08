@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityScreen">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#fa334a"
+        android:id="@+id/actTopView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:text="Activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/actTitleTxt"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:textColor="#fff"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+    <!-- TAB BAR -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/actTabBar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_one"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_home"
+            android:layout_gravity="center_horizontal"
+            android:text="Browse"
+            android:textColor="#555"
+            android:backgroundTint="#555"
+            android:paddingTop="40dp"
+            android:textSize="8dp" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_two"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_likes"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="My Likes"
+            android:textSize="8dp"
+            android:backgroundTint="#555"
+            android:textColor="#555"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_three"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_sell"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="Sell"
+            android:textSize="8dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#555"
+            android:backgroundTint="#555"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_four"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_activity"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="Activity"
+            android:textSize="8dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/main_color"
+            android:textColor="@color/main_color"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/tab_five"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_account"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="40dp"
+            android:text="Account"
+            android:textSize="8dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#555"
+            android:backgroundTint="#555"/>
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/admobBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ADMOB_BANNER_UNIT_ID"
+        android:layout_above="@+id/actTabBar"
+        android:layout_centerHorizontal="true">
+    </com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:text="Long press to delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actTopView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/actTxtTip"
+        android:textSize="9sp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_marginTop="5dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:id="@+id/actListView"
+        android:layout_above="@+id/admobBanner"
+        android:dividerHeight="1dp"
+        android:divider="@color/cardview_shadow_start_color"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/actTxtTip"
+        android:layout_marginTop="5dp"/>
+
+
+</RelativeLayout>

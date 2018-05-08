@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginBottom="47dp"
+        android:id="@+id/progressBar3"
+        android:indeterminateTint="#fa334a"
+        android:layout_above="@+id/chCatNameTxt"
+        android:layout_alignStart="@+id/chCatImage"/>
+
+    <ImageView
+        android:id="@+id/chCatImage"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:text="LOADING..."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chCatNameTxt"
+        android:textSize="14sp"
+        android:textColor="#fff"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="11dp"
+        android:textStyle="normal|bold"
+        android:layout_alignBottom="@+id/chCatImage"
+        android:layout_alignStart="@+id/chCatImage"
+        android:layout_alignEnd="@+id/chCatImage"/>
+
+</RelativeLayout>
