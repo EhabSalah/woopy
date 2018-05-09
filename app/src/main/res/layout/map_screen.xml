@@ -44,7 +44,7 @@
         android:layout_marginTop="20dp"
         android:background="#77000000"
         android:gravity="center_vertical"
-        android:text="Move and zoom to set location"
+        android:text="@string/txt_Move_and_zoom_to_set_location"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="12sp"

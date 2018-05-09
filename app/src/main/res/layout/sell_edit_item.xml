@@ -22,7 +22,7 @@
 
 
         <TextView
-            android:text="Sell an item"
+            android:text="@string/alert_Sell_an_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/sellTitleTxt"
@@ -39,7 +39,7 @@
             android:layout_marginRight="5dp"
             android:background="@android:color/transparent"
             android:textColor="#fff"
-            android:text="Submit"
+            android:text="@string/btn_Submit"
             android:layout_marginLeft="5dp"
             android:textAllCaps="false"
             android:textSize="12dp"
@@ -55,7 +55,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="8dp"
             android:layout_marginTop="20dp"
-            android:text="Cancel"
+            android:text="@string/alert_cancel"
             android:textSize="12sp"
             android:textColor="#fff"
             android:background="@android:color/transparent"
@@ -88,7 +88,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Add images (1st one required)"
+                    android:text="@string/txt_Add_images_1st_one_equired"
                     android:textColor="#777"
                     android:textSize="14sp"
                     android:textStyle="normal|bold" />
@@ -160,7 +160,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginRight="10dp"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Video"
+                    android:text="@string/txt_Video"
                     android:textAlignment="center"
                     android:textColor="#777"
                     android:textStyle="normal|bold" />
@@ -191,7 +191,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="123dp"
-                    android:text="DETAILS"
+                    android:text="@string/txt_DETAILS"
                     android:textColor="#777"
                     android:textStyle="normal|bold" />
 
@@ -213,7 +213,7 @@
                     android:layout_below="@+id/textView8"
                     android:layout_toEndOf="@+id/imageView13"
                     android:gravity="center_vertical"
-                    android:text="Category:"
+                    android:text="@string/txt_Category"
                     android:textSize="12sp" />
 
                 <Button
@@ -225,7 +225,7 @@
                     android:layout_marginLeft="7dp"
                     android:layout_toEndOf="@+id/textView10"
                     android:background="@android:color/transparent"
-                    android:text="Choose one..."
+                    android:text="@string/btn_Choose_one"
                     android:textAlignment="textStart"
                     android:textAllCaps="false"
                     android:textColor="#555"
@@ -252,7 +252,7 @@
                     android:layout_marginRight="10dp"
                     android:background="#fff"
                     android:ems="10"
-                    android:hint="Title of the item you're selling"
+                    android:hint="@string/txt_Title_of_the_item_youre_selling"
                     android:imeOptions="actionDone"
                     android:inputType="none"
                     android:maxLines="1"
@@ -269,7 +269,7 @@
                     android:layout_below="@+id/textView9"
                     android:layout_marginTop="10dp"
                     android:gravity="center_vertical"
-                    android:text="Price:"
+                    android:text="@string/txt_Price"
                     android:textSize="12sp" />
 
                 <TextView
@@ -280,7 +280,7 @@
                     android:layout_below="@+id/sellPriceTxt"
                     android:layout_marginTop="10dp"
                     android:gravity="center_vertical"
-                    android:text="Condition:"
+                    android:text="@string/txt_Condition"
                     android:textSize="12sp" />
 
                 <ImageView
@@ -311,7 +311,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_toEndOf="@+id/imageView15"
                     android:gravity="center_vertical"
-                    android:text="Title:"
+                    android:text="@string/txt_Title"
                     android:textSize="12sp" />
 
                 <Button
@@ -323,7 +323,7 @@
                     android:layout_alignTop="@+id/textView12"
                     android:layout_marginLeft="5dp"
                     android:background="#777"
-                    android:text="New"
+                    android:text="@string/txt_New"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="12sp" />
@@ -336,7 +336,7 @@
                     android:layout_alignTop="@+id/sellNewButt"
                     android:layout_toEndOf="@+id/sellNewButt"
                     android:background="#bababa"
-                    android:text="Used"
+                    android:text="@string/txt_Used"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="12sp" />
@@ -349,7 +349,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_toEndOf="@+id/imageView16"
                     android:gravity="center_vertical"
-                    android:text="Description:"
+                    android:text="@string/txt_Description"
                     android:textSize="12sp" />
 
                 <ImageView
@@ -372,7 +372,7 @@
                     android:layout_marginTop="10dp"
                     android:background="#fff"
                     android:ems="10"
-                    android:hint="Set a price for your item"
+                    android:hint="@string/txt_Set_priceforyouritem"
                     android:imeOptions="actionDone"
                     android:inputType="number"
                     android:paddingLeft="5dp"
@@ -388,7 +388,7 @@
                     android:layout_toEndOf="@+id/imageView16"
                     android:background="#fff"
                     android:gravity="top"
-                    android:hint="Type a description of your item"
+                    android:hint="@string/txt_Type_description_of_your_item"
                     android:imeOptions="normal"
                     android:inputType="textMultiLine"
                     android:paddingLeft="5dp"
@@ -405,7 +405,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="50dp"
                     android:backgroundTint="@color/main_color"
-                    android:text="Delete Item"
+                    android:text="@string/btn_Delete_Item"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="16sp"
@@ -421,7 +421,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="20dp"
                     android:backgroundTint="@color/com_facebook_blue"
-                    android:text="Choose location (optional)*"
+                    android:text="@string/txt_Choose_location_optional"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="13sp"
@@ -435,7 +435,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:text="* if you don't choose a location, your current one will be set by default "
+                    android:text="@string/txt_default"
                     android:textAlignment="textStart"
                     android:textSize="11sp"
                     android:textStyle="italic" />
@@ -479,7 +479,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="10dp"
                 android:background="@android:color/transparent"
-                android:text="Done"
+                android:text="@string/btn_Done"
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="12dp" />
@@ -492,7 +492,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:gravity="center_vertical"
-                android:text="Choose category"
+                android:text="@string/txt_Choose_category"
                 android:textAlignment="center"
                 android:textColor="#fff"
                 android:textStyle="normal|bold" />

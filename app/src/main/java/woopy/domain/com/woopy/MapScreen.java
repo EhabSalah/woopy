@@ -83,7 +83,7 @@ public class MapScreen extends AppCompatActivity implements OnMapReadyCallback {
                     finish();
 
                 // No Location set
-                } else { Configs.simpleAlert("You must move the Map and to choose a Location, or just close this Map screen", MapScreen.this); }
+                } else { Configs.simpleAlert(getResources().getString(R.string.toast_You_must_move_the_Map_and_to_choose_Location_or_just_close_this_Map_screen), MapScreen.this); }
         }});
 
 

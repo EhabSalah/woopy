@@ -162,7 +162,7 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
             adObj = ParseObject.createWithoutData(Configs.ADS_CLASS_NAME, objectID);
             try { adObj.fetchIfNeeded().getParseObject(Configs.ADS_CLASS_NAME);
 
-                titleTxt.setText("Edit item");
+                titleTxt.setText(R.string.alert_Edit_item);
                 deleteAdButt.setVisibility(View.VISIBLE);
 
                 // Call query
@@ -175,7 +175,7 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
         // YOU'RE SELLING A NEW ITEM ---------------
         } else {
             adObj = new ParseObject(Configs.ADS_CLASS_NAME);
-            titleTxt.setText("Sell an item");
+            titleTxt.setText(R.string.alert_Sell_an_item);
             deleteAdButt.setVisibility(View.INVISIBLE);
 
             // Set default variables
@@ -268,9 +268,9 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
                 Log.i("log-", "PICTURE TAG: " + pictureTag);
 
                 AlertDialog.Builder alert = new AlertDialog.Builder(SellEditItem.this);
-                alert.setMessage("Select source")
+                alert.setMessage(R.string.alert_Select_source)
                         .setTitle(R.string.app_name)
-                        .setPositiveButton("Take a Video", new DialogInterface.OnClickListener() {
+                        .setPositiveButton(R.string.alert_Take_Video, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 if (!mmp.checkPermissionForCamera()) {
@@ -279,7 +279,7 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
                                     openVideoCamera();
                         }}})
 
-                        .setNegativeButton("Pick from Gallery", new DialogInterface.OnClickListener() {
+                        .setNegativeButton(R.string.alert_Pick_from_Gallery, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 if (!mmp.checkPermissionForReadExternalStorage()) {
@@ -288,7 +288,7 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
                                     openVideoGallery();
                         }}})
 
-                        .setNeutralButton("Cancel", null)
+                        .setNeutralButton(R.string.alert_cancel, null)
                         .setIcon(R.drawable.logo);
                 alert.create().show();
         }});
@@ -336,12 +336,12 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
               if (image1.getDrawable() == null || adTitleTxt.getText().toString().matches("") || condition.matches("")
                       || descriptionTxt.getText().toString().matches("") || categoryName.matches("") || priceTxt.getText().toString().matches("")
                       ){
-                  Configs.simpleAlert("You must make sure you've inserted the following details:\n-Category\n-Ad Title\n-Condition of the item\n-A description\n-First image", SellEditItem.this);
+                  Configs.simpleAlert(R.string.alert_You_must_make_sure_youve_inserted_the_following_details+"\n"+R.string.alert_Category+"\n"+R.string.alert_Ad_Title+"\n"+R.string.alert_Condition_of_the_item+"\n"+R.string.alert_A_description+"\n"+R.string.alert_First_image, SellEditItem.this);
 
 
               // You can submit your Ad!
               } else {
-                  Configs.showPD("Submitting ad...", SellEditItem.this);
+                  Configs.showPD(getResources().getString(R.string.alert_Submitting_ad), SellEditItem.this);
 
                   adObj.put(Configs.ADS_SELLER_POINTER, currentUser);
                   adObj.put(Configs.ADS_TITLE, adTitleTxt.getText().toString());
@@ -415,9 +415,9 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
 
                                           // Fire an alert
                                           AlertDialog.Builder alert = new AlertDialog.Builder(SellEditItem.this);
-                                          alert.setMessage("Your Ad has been successfully posted!")
+                                          alert.setMessage(R.string.alert_Your_Ad_has_been_successfully_posted)
                                                   .setTitle(R.string.app_name)
-                                                  .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                  .setPositiveButton(R.string.btn_OK, new DialogInterface.OnClickListener() {
                                                       @Override
                                                       public void onClick(DialogInterface dialogInterface, int i) {
                                                           startActivity(new Intent(SellEditItem.this, Home.class));
@@ -455,16 +455,16 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
             public void onClick(View view) {
 
                 AlertDialog.Builder alert = new AlertDialog.Builder(SellEditItem.this);
-                alert.setMessage("Are you sure you want to delete this item?")
+                alert.setMessage(R.string.alert_Are_you_sure_you_want_to_delete_this_item)
                     .setTitle(R.string.app_name)
-                    .setPositiveButton("Delete Item", new DialogInterface.OnClickListener() {
+                    .setPositiveButton(R.string.alert_Delete_Item, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
 
                             deleteAdInOtherClasses();
                     }})
 
-                    .setNegativeButton("Cancel", null)
+                    .setNegativeButton(R.string.alert_cancel, null)
                     .setIcon(R.drawable.logo);
                 alert.create().show();
 
@@ -540,9 +540,9 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
             public void done(ParseException e) {
                 if (e == null) {
                     AlertDialog.Builder alert = new AlertDialog.Builder(SellEditItem.this);
-                    alert.setMessage("Your Item has been deleted!")
+                    alert.setMessage(R.string.alert_Your_Item_has_been_deleted)
                             .setTitle(R.string.app_name)
-                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            .setPositiveButton(R.string.btn_OK, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     finish();
@@ -616,9 +616,9 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
     void showAlertForImage() {
         Log.i("log-", "PICTURE TAG: " + pictureTag);
         AlertDialog.Builder alert = new AlertDialog.Builder(SellEditItem.this);
-        alert.setMessage("Select source")
+        alert.setMessage(R.string.alert_Select_source)
                 .setTitle(R.string.app_name)
-                .setPositiveButton("Take a Picture", new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.alert_Take_Picture, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         if (!mmp.checkPermissionForCamera()) {
@@ -628,7 +628,7 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
                         }
                     }})
 
-                .setNegativeButton("Pick from Gallery", new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.alert_Pick_from_Gallery, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         if (!mmp.checkPermissionForReadExternalStorage()) {
@@ -638,7 +638,7 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
                         }
                     }})
 
-                .setNeutralButton("Cancel", null)
+                .setNeutralButton(R.string.alert_cancel, null)
                 .setIcon(R.drawable.logo);
         alert.create().show();
     }
@@ -676,7 +676,7 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent, "Select Image"), GALLERY);
+        startActivityForResult(Intent.createChooser(intent, getResources().getString(R.string.alert_Select_Image)), GALLERY);
     }
 
 
@@ -694,7 +694,7 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
         intent.setType("video/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         intent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, Configs.MAXIMUM_DURATION_VIDEO);
-        startActivityForResult(Intent.createChooser(intent, "Select Video"), VIDEO_GALLERY);
+        startActivityForResult(Intent.createChooser(intent, getResources().getString(R.string.alert_Select_Video)), VIDEO_GALLERY);
     }
 
 
@@ -765,9 +765,9 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
 
                 // Video exceeds the maximum allowed duration
                 } else {
-                    Configs.simpleAlert("Your video is longer than " +
+                    Configs.simpleAlert(R.string.alert_Your_video_is_longer_than +
                             String.valueOf(Configs.MAXIMUM_DURATION_VIDEO) +
-                            " seconds. Please choose or take a shorter video", SellEditItem.this);
+                            R.string.alert_seconds_Please_choose_or_take_a_shorter_video, SellEditItem.this);
 
                     // Reset variables and image
                     videoPath = null;
@@ -961,7 +961,7 @@ public class SellEditItem extends AppCompatActivity implements LocationListener 
 
         // NO GPS location found!
         } else {
-            Configs.simpleAlert("Failed to get your Location.\nGo into Settings and make sure Location Service is enabled, otherwise your Ad will be posted in New York City as default location", SellEditItem.this);
+            Configs.simpleAlert(getResources().getString(R.string.alert_Failed_to_get_your_Location)+"\n"+getResources().getString(R.string.alert_Go_into), SellEditItem.this);
 
             // Set New York City as default currentLocation
             currentLocation = new Location("dummyprovider");

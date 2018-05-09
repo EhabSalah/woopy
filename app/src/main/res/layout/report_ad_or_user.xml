@@ -23,7 +23,7 @@
             android:layout_height="44dp"
             android:id="@+id/repCancelButt"
             android:background="@android:color/transparent"
-            android:text="Cancel"
+            android:text="@string/alert_cancel"
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textSize="12dp"
@@ -33,7 +33,7 @@
             android:layout_marginStart="11dp"/>
 
         <TextView
-            android:text="Report"
+            android:text="@string/txt_Report"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -46,7 +46,7 @@
     </RelativeLayout>
 
     <TextView
-        android:text="SELECT AN OPTION"
+        android:text="@string/txt_SELECT_AN_OPTION"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/repTopView"

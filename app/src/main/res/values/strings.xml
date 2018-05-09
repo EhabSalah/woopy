@@ -192,5 +192,73 @@
     <string name="txt_Forgot_password">Forgot password?</string>
     <!--     login.xml & class done        -->
 
+    <!--     map_screen.xml & class done        -->
+    <string name="toast_You_must_move_the_Map_and_to_choose_Location_or_just_close_this_Map_screen">You must move the Map and to choose a Location, or just close this Map screen</string>
+    <string name="txt_Move_and_zoom_to_set_location">Move and zoom to set location</string>
+    <!--     map_screen.xml & class done        -->
+
+    <!--     permissions.xml & class done        -->
+    <string name="alert_LocationpermissionisneededtosearchAdsnearbyyourlocationPleaseenableLocationinAppSettingotherwiseyoullgetAdsonlyfromNewYorkCity">Location permission is needed to search Ads nearby your location. Please enable Location in App Settings, otherwise you will get Ads only from New York City.</string>
+    <string name="toast_Microphone_permission_needed_for_recording_Please_allow_in_App_Settings_for_additional_functionality">Microphone permission needed for recording. Please allow in App Settings for additional functionality.</string>
+    <string name="toast_External_Storage_permission_needed_Please_allow_in_App_Settings_for_additional_functionality">External Storage permission needed. Please allow in App Settings for additional functionality.</string>
+    <string name="toast_External_Storage_permission_needed_Please_allow_in_App_Settings_for_additional_functionalit">External Storage permission needed. Please allow in App Settings for additional functionality.</string>
+    <string name="toast_Camera_permission_needed_Please_allow_in_App_Settings_foradditional_functionality">Camera permission needed. Please allow in App Settings for additional functionality.</string>
+    <!--     permissions.xml & class done        -->
+
+    <!--     my_likes.xml & class done        -->
+    <string name="alert_Removing_liked_ad">Removing liked ad...</string>
+    <string name="txt_Listings_you_liked_will_be_displayed_here">Listings you liked will be displayed here.</string>
+    <!--     my_likes.xml & class done        -->
+
+    <!--     reportAdOrUser.xml & class done        -->
+    <string name="alert_Are_you_sure_you_want_to_report_this">Are you sure you want to report this </string>
+    <string name="alert_for_the_following_reason"> for the following reason:</string>
+    <string name="alert_Yes_Im_sure">Yes, I am sure</string>
+    <string name="alert_Thanks_for_reporting_this_Ad_We_will_review_it_within_24h">Thanks for reporting this Ad. We will review it within 24h</string>
+    <string name="alert_Thanks_for_reporting_this_User_we_ll_check_it_out_within_24hours">Thanks for reporting this User, we will check it out within 24 hours!</string>
+    <string name="alert_No">No</string>
+    <string name="txt_Report">Report</string>
+    <string name="txt_SELECT_AN_OPTION">SELECT AN OPTION</string>
+    <!--     reportAdOrUser.xml & class done        -->
+
+    <!--     sell_edit_item.xml & class done        -->
+    <string name="alert_Edit_item">Edit item</string>
+    <string name="alert_Sell_an_item">Sell an item</string>
+    <string name="alert_Take_Video">Take a Video</string>
+    <string name="alert_You_must_make_sure_youve_inserted_the_following_details">You must make sure you have inserted the following details:</string>
+    <string name="alert_Category">-Category</string>
+    <string name="alert_Ad_Title">-Ad Title</string>
+    <string name="alert_Condition_of_the_item">-Condition of the item</string>
+    <string name="alert_A_description">-A description</string>
+    <string name="alert_First_image">-First image</string>
+    <string name="alert_Submitting_ad">Submitting ad...</string>
+    <string name="alert_Your_Ad_has_been_successfully_posted">Your Ad has been successfully posted!</string>
+    <string name="alert_Are_you_sure_you_want_to_delete_this_item">Are you sure you want to delete this item?</string>
+    <string name="alert_Delete_Item">Delete Item</string>
+    <string name="alert_Your_Item_has_been_deleted">Your Item has been deleted!</string>
+    <string name="alert_Select_Video">Select Video</string>
+    <string name="alert_Your_video_is_longer_than">Your video is longer than </string>
+    <string name="alert_seconds_Please_choose_or_take_a_shorter_video">seconds. Please choose or take a shorter video</string>
+    <string name="alert_Failed_to_get_your_Location">Failed to get your Location.</string>
+    <string name="alert_Go_into">Go into Settings and make sure Location Service is enabled, otherwise your Ad will be posted in New York City as default location</string>
+    <string name="btn_Submit">Submit</string>
+    <string name="txt_Add_images_1st_one_equired">Add images (1st one required)</string>
+    <string name="txt_Video">Video</string>
+    <string name="txt_DETAILS">DETAILS</string>
+    <string name="txt_Category">Category:</string>
+    <string name="btn_Choose_one">Choose one...</string>
+    <string name="txt_Title_of_the_item_youre_selling">Title of the item you are selling</string>
+    <string name="txt_Price">Price:</string>
+    <string name="txt_Condition">Condition:</string>
+    <string name="txt_Title">Title:</string>
+    <string name="txt_New">New</string>
+    <string name="txt_Used">Used</string>
+    <string name="txt_Description">Description:</string>
+    <string name="txt_Set_priceforyouritem">Set a price for your item</string>
+    <string name="txt_Type_description_of_your_item">Type a description of your item</string>
+    <string name="btn_Delete_Item">Delete Item</string>
+    <string name="txt_Choose_location_optional">Choose location (optional)*</string>
+    <string name="txt_default">* if you do not choose a location, your current one will be set by default </string>
+    <!--     sell_edit_item.xml & class done        -->
 
 </resources>

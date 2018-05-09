@@ -136,7 +136,7 @@ public class MyLikes extends AppCompatActivity {
     void queryLikes() {
         noLikesLayout.setVisibility(View.INVISIBLE);
 
-        Configs.showPD("Please wait...", MyLikes.this);
+        Configs.showPD(getResources().getString(R.string.alert_please_wait), MyLikes.this);
 
         // Launch query
         ParseQuery<ParseObject> query = ParseQuery.getQuery(Configs.LIKES_CLASS_NAME);
@@ -302,11 +302,11 @@ public class MyLikes extends AppCompatActivity {
                                                     @Override
                                                     public void onClick(View view) {
                                                         AlertDialog.Builder alert = new AlertDialog.Builder(MyLikes.this);
-                                                        alert.setMessage("Select option")
+                                                        alert.setMessage(R.string.alert_select_option)
                                                                 .setTitle(R.string.app_name)
 
                                                                 // REPORT AD
-                                                                .setPositiveButton("Report Ad", new DialogInterface.OnClickListener() {
+                                                                .setPositiveButton(R.string.alert_report_ad, new DialogInterface.OnClickListener() {
                                                                     @Override
                                                                     public void onClick(DialogInterface dialogInterface, int i) {
                                                                         Intent in = new Intent(MyLikes.this, ReportAdOrUser.class);
@@ -320,7 +320,7 @@ public class MyLikes extends AppCompatActivity {
 
 
                                                                 // SHARE AD
-                                                                .setNegativeButton("Share", new DialogInterface.OnClickListener() {
+                                                                .setNegativeButton(R.string.alert_share, new DialogInterface.OnClickListener() {
                                                                     @Override
                                                                     public void onClick(DialogInterface dialogInterface, int i) {
                                                                         if (!mmp.checkPermissionForWriteExternalStorage()) {
@@ -346,7 +346,7 @@ public class MyLikes extends AppCompatActivity {
 
 
                                                                 // Cancel
-                                                                .setNeutralButton("Cancel", null)
+                                                                .setNeutralButton(R.string.alert_cancel, null)
                                                                 .setIcon(R.drawable.logo);
                                                         alert.create().show();
                                                     }
@@ -358,7 +358,7 @@ public class MyLikes extends AppCompatActivity {
                                                 likeButt.setOnClickListener(new View.OnClickListener() {
                                                     @Override
                                                     public void onClick(View view) {
-                                                        Configs.showPD("Removing liked ad...", MyLikes.this);
+                                                        Configs.showPD(getResources().getString(R.string.alert_Removing_liked_ad), MyLikes.this);
 
                                                         final ParseUser currUser = ParseUser.getCurrentUser();
 

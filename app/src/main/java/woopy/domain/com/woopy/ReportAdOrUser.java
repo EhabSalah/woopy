@@ -117,13 +117,13 @@ public class ReportAdOrUser extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v, final int position, long id) {
 
                 AlertDialog.Builder alert = new AlertDialog.Builder(ReportAdOrUser.this);
-                alert.setMessage("Are you sure you want to report this " + reportType + " for the following reason:\n" + reportArray.get(position) + "?")
+                alert.setMessage(R.string.alert_Are_you_sure_you_want_to_report_this + reportType + R.string.alert_for_the_following_reason+"\n" + reportArray.get(position) + "?")
                         .setTitle(R.string.app_name)
-                        .setPositiveButton("Yes, I'm sure", new DialogInterface.OnClickListener() {
+                        .setPositiveButton(R.string.alert_Yes_Im_sure, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
 
-                                Configs.showPD("Please wait...", ReportAdOrUser.this);
+                                Configs.showPD(getResources().getString(R.string.alert_please_wait), ReportAdOrUser.this);
 
                                 // REPORT THE AD --------------------------------------------------
                                 if (reportType.matches("Ad")) {
@@ -139,9 +139,9 @@ public class ReportAdOrUser extends AppCompatActivity {
                                                 Configs.hidePD();
 
                                                 AlertDialog.Builder alert = new AlertDialog.Builder(ReportAdOrUser.this);
-                                                alert.setMessage("Thanks for reporting this Ad. We'll review it within 24h")
+                                                alert.setMessage(R.string.alert_Thanks_for_reporting_this_Ad_We_will_review_it_within_24h)
                                                     .setTitle(R.string.app_name)
-                                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                    .setPositiveButton(R.string.btn_OK, new DialogInterface.OnClickListener() {
                                                         @Override
                                                         public void onClick(DialogInterface dialogInterface, int i) {
                                                             // Go back to Home
@@ -170,9 +170,9 @@ public class ReportAdOrUser extends AppCompatActivity {
                                                 Configs.hidePD();
 
                                                 AlertDialog.Builder alert = new AlertDialog.Builder(ReportAdOrUser.this);
-                                                alert.setMessage("Thanks for reporting this User, we'll check it out within 24 hours!")
+                                                alert.setMessage(R.string.alert_Thanks_for_reporting_this_User_we_ll_check_it_out_within_24hours)
                                                     .setTitle(R.string.app_name)
-                                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                    .setPositiveButton(R.string.btn_OK, new DialogInterface.OnClickListener() {
                                                         @Override
                                                         public void onClick(DialogInterface dialogInterface, int i) {
                                                             // Go back to Home
@@ -210,7 +210,7 @@ public class ReportAdOrUser extends AppCompatActivity {
 
                         }})
 
-                        .setNegativeButton("No", null)
+                        .setNegativeButton(R.string.alert_No, null)
                         .setIcon(R.drawable.logo);
                     alert.create().show();
 
