@@ -191,7 +191,7 @@ public class AdsList extends AppCompatActivity implements LocationListener {
                     if (!searchTxt.getText().toString().matches("")) {
 
                         Configs.selectedCategory = "All";
-                        categoryButt.setText("All");
+                        categoryButt.setText(getResources().getString(R.string.btn_all));
                         searchString = searchTxt.getText().toString();
                         dismisskeyboard();
 
@@ -202,7 +202,7 @@ public class AdsList extends AppCompatActivity implements LocationListener {
                     }
 
                     // No text -> No search
-                } else { Configs.simpleAlert("You must type somehting!", AdsList.this); }
+                } else { Configs.simpleAlert(getResources().getString(R.string.alert_you_must_type_somehting), AdsList.this); }
 
                 return false;
         }});
@@ -251,7 +251,7 @@ public class AdsList extends AppCompatActivity implements LocationListener {
                 if (ParseUser.getCurrentUser().getUsername() != null) {
                     startActivity(new Intent(AdsList.this, Chats.class));
                 } else {
-                    Configs.loginAlert("You must be loggen in to see your Chats. Want to login now?", AdsList.this);
+                    Configs.loginAlert(getResources().getString(R.string.toast_You_must_be_loggen_in_to_see_your_Chats_want_to_login_now), AdsList.this);
                 }
         }});
 
@@ -379,7 +379,7 @@ public class AdsList extends AppCompatActivity implements LocationListener {
 
         // NO GPS location found!
         } else {
-            Configs.simpleAlert("Failed to get your Location.\nGo into Settings and make sure Location Service is enabled!", AdsList.this);
+            Configs.simpleAlert(getResources().getString(R.string.toast_Failed_to_get_your_Location)+"\n"+getResources().getString(R.string.toast_Go_into_Settings_and_make_sure_Location_Service_is_enabled), AdsList.this);
 
             // Set New York City as default currentLocation
             currentLocation = new Location("provider");
@@ -389,8 +389,8 @@ public class AdsList extends AppCompatActivity implements LocationListener {
 
             // Set distance and city labels
             String distFormatted = String.format("%.0f", Configs.distanceInMiles);
-            distanceTxt.setText(distFormatted + " Mi FROM");
-            cityCountryButt.setText("New York, USA");
+            distanceTxt.setText(distFormatted + getResources().getString(R.string.alert_Mi_FROM));
+            cityCountryButt.setText(getResources().getString(R.string.btn_NewYorkUSA));
 
 
             // Call query
@@ -426,13 +426,13 @@ public class AdsList extends AppCompatActivity implements LocationListener {
 
                 // Set distance
                 String distFormatted = String.format("%.0f", Configs.distanceInMiles);
-                distanceTxt.setText(distFormatted + " Mi FROM");
+                distanceTxt.setText(distFormatted + getResources().getString(R.string.alert_Mi_FROM));
 
 
                 // Call query
                 queryAds();
 
-            } else { Toast.makeText(getApplicationContext(), "Geocoder not present!", Toast.LENGTH_SHORT).show(); }
+            } else { Toast.makeText(getApplicationContext(), getResources().getString(R.string.toast_geocoder_not_present), Toast.LENGTH_SHORT).show(); }
         } catch (IOException e) { Configs.simpleAlert(e.getMessage(), AdsList.this); }
 
     }
@@ -448,7 +448,7 @@ public class AdsList extends AppCompatActivity implements LocationListener {
     void queryAds() {
         noResultsLayout.setVisibility(View.INVISIBLE);
 
-        Configs.showPD("Please wait...", AdsList.this);
+        Configs.showPD(getResources().getString(R.string.alert_please_wait), AdsList.this);
 
 
         // Launch query
@@ -629,7 +629,7 @@ public class AdsList extends AppCompatActivity implements LocationListener {
                                                 i.putExtras(extras);
                                                 startActivity(i);
                                             } else {
-                                                Configs.loginAlert("You must be logged in to see and post comments. Want to login now?", AdsList.this);
+                                                Configs.loginAlert(getResources().getString(R.string.toast_You_must_be_logged_in_to_see_and_post_comments_Want_to_login_now), AdsList.this);
                                             }
                                     }});
 
@@ -642,11 +642,11 @@ public class AdsList extends AppCompatActivity implements LocationListener {
                                       @Override
                                       public void onClick(View view) {
                                           AlertDialog.Builder alert = new AlertDialog.Builder(AdsList.this);
-                                          alert.setMessage("Select option")
+                                          alert.setMessage(getResources().getString(R.string.alert_select_option))
                                               .setTitle(R.string.app_name)
 
                                               // REPORT AD
-                                              .setPositiveButton("Report Ad", new DialogInterface.OnClickListener() {
+                                              .setPositiveButton(getResources().getString(R.string.alert_Report_Ad), new DialogInterface.OnClickListener() {
                                                   @Override
                                                   public void onClick(DialogInterface dialogInterface, int i) {
                                                       Intent in = new Intent(AdsList.this, ReportAdOrUser.class);
@@ -659,7 +659,7 @@ public class AdsList extends AppCompatActivity implements LocationListener {
 
 
                                               // SHARE AD
-                                              .setNegativeButton("Share", new DialogInterface.OnClickListener() {
+                                              .setNegativeButton(getResources().getString(R.string.alert_share), new DialogInterface.OnClickListener() {
                                                   @Override
                                                   public void onClick(DialogInterface dialogInterface, int i) {
                                                       if (!mmp.checkPermissionForWriteExternalStorage()) {
@@ -678,14 +678,14 @@ public class AdsList extends AppCompatActivity implements LocationListener {
                                                                               intent.setType("image/jpeg");
                                                                               intent.putExtra(Intent.EXTRA_STREAM, uri);
                                                                               intent.putExtra(Intent.EXTRA_TEXT, "Check this out: " + adObj.getString(Configs.ADS_TITLE) + " on #woopy");
-                                                                              startActivity(Intent.createChooser(intent, "Share on..."));
+                                                                              startActivity(Intent.createChooser(intent, getResources().getString(R.string.alert_share_on)));
                                                           }}}});}
                                                       }
                                               }})
 
 
                                               // Cancel
-                                              .setNeutralButton("Cancel", null)
+                                              .setNeutralButton(getResources().getString(R.string.alert_cancel), null)
                                               .setIcon(R.drawable.logo);
                                           alert.create().show();
                                      }});
@@ -700,7 +700,7 @@ public class AdsList extends AppCompatActivity implements LocationListener {
                                       public void onClick(View view) {
                                           if (ParseUser.getCurrentUser().getUsername() != null) {
 
-                                              Configs.showPD("Please wait...", AdsList.this);
+                                              Configs.showPD(getResources().getString(R.string.alert_please_wait), AdsList.this);
 
                                           final ParseUser currUser = ParseUser.getCurrentUser();
 
@@ -751,7 +751,7 @@ public class AdsList extends AppCompatActivity implements LocationListener {
                                                                       // Send push notification
                                                                       final ParseUser sellerPointer = (ParseUser) adObj.get(Configs.ADS_SELLER_POINTER);
 
-                                                                      final String pushMessage = "@" + currUser.getUsername() + " liked your Ad: " + adObj.getString(Configs.ADS_TITLE);
+                                                                      final String pushMessage = "@" + currUser.getUsername() + getResources().getString(R.string.toast_liked_your_ad) + adObj.getString(Configs.ADS_TITLE);
 
                                                                       HashMap<String, Object> params = new HashMap<String, Object>();
                                                                       params.put("someKey", sellerPointer.getObjectId());
@@ -830,7 +830,7 @@ public class AdsList extends AppCompatActivity implements LocationListener {
 
 
                                           // YOU'RE NOT LOGGED IN
-                                          } else {  Configs.loginAlert("You must be logged in to like this Ad. Want to login now?", AdsList.this);  }
+                                          } else {  Configs.loginAlert(getResources().getString(R.string.toast_You_must_be_logged_in_to_like_this_Ad_Want_to_login_now), AdsList.this);  }
 
                                       }});
 

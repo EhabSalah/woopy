@@ -152,12 +152,12 @@ public class Account extends AppCompatActivity {
           @Override
           public void onClick(View view) {
               AlertDialog.Builder alert = new AlertDialog.Builder(Account.this);
-              alert.setMessage("Are you sure you want to logout?")
+              alert.setMessage(R.string.alert_logout)
                   .setTitle(R.string.app_name)
-                  .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                  .setPositiveButton(R.string.alert_confirm_logout, new DialogInterface.OnClickListener() {
                       @Override
                       public void onClick(DialogInterface dialogInterface, int i) {
-                          Configs.showPD("Logging out...", Account.this);
+                          Configs.showPD(getResources().getString(R.string.alert_loging_out), Account.this);
 
                           ParseUser.logOutInBackground(new LogOutCallback() {
                               @Override
@@ -168,7 +168,7 @@ public class Account extends AppCompatActivity {
                           }});
                   }})
 
-                  .setNegativeButton("Cancel", null)
+                  .setNegativeButton(R.string.alert_cancel, null)
                   .setIcon(R.drawable.logo);
               alert.create().show();
          }});
@@ -199,7 +199,7 @@ public class Account extends AppCompatActivity {
         // Get joined since
         TextView joinedTxt = findViewById(R.id.accJoinedTxt);
         joinedTxt.setTypeface(Configs.titRegular);
-        joinedTxt.setText("Joined: " + Configs.timeAgoSinceDate(currUser.getCreatedAt()));
+        joinedTxt.setText(R.string.txt_joined_since + Configs.timeAgoSinceDate(currUser.getCreatedAt()));
 
 
         // Get verified
@@ -207,9 +207,9 @@ public class Account extends AppCompatActivity {
         verifiedtxt.setTypeface(Configs.titRegular);
         if (currUser.get(Configs.USER_EMAIL_VERIFIED) != null) {
             if (currUser.getBoolean(Configs.USER_EMAIL_VERIFIED)) {
-                verifiedtxt.setText("Verified: Yes");
-            } else { verifiedtxt.setText("Verified: No"); }
-        } else { verifiedtxt.setText("Verified: No"); }
+                verifiedtxt.setText(R.string.alert_verified_yes);
+            } else { verifiedtxt.setText(R.string.alert_verified_no); }
+        } else { verifiedtxt.setText(R.string.alert_verified_no); }
 
         // Get avatar
         final ImageView avImg = findViewById(R.id.accAvatarImg);
@@ -226,7 +226,7 @@ public class Account extends AppCompatActivity {
 
     // MARK: - QUERY MY ADS ------------------------------------------------------------------
     void queryMyAds() {
-        Configs.showPD("Please wait...", Account.this);
+        Configs.showPD(getResources().getString(R.string.alert_please_wait), Account.this);
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery(Configs.ADS_CLASS_NAME);
         query.whereEqualTo(Configs.ADS_SELLER_POINTER, ParseUser.getCurrentUser());

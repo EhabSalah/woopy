@@ -103,7 +103,7 @@ public class ActivityScreen extends AppCompatActivity {
 
     // MARK: - QUERY ACTIVITY ---------------------------------------------------------------
     void queryActivity() {
-        Configs.showPD("Please wait...", ActivityScreen.this);
+        Configs.showPD(getResources().getString(R.string.alert_please_wait), ActivityScreen.this);
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery(Configs.ACTIVITY_CLASS_NAME);
         query.whereEqualTo(Configs.ACTIVITY_CURRENT_USER, ParseUser.getCurrentUser());
@@ -205,7 +205,7 @@ public class ActivityScreen extends AppCompatActivity {
                                     activityArray.remove(i);
                                     aList.invalidateViews();
                                     aList.refreshDrawableState();
-                                    Toast.makeText(ActivityScreen.this, "Activity removed!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ActivityScreen.this, getResources().getString(R.string.toast_activity_removed), Toast.LENGTH_SHORT).show();
                             }});
 
                             return false;

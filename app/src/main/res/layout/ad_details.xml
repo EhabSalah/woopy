@@ -19,7 +19,7 @@
 
 
         <TextView
-            android:text="Ad details"
+            android:text="@string/txt_ad_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -46,7 +46,7 @@
         <Button
             android:layout_width="44dp"
             android:layout_height="44dp"
-            android:text="•••"
+            android:text="@string/btn_dots"
             android:textColor="#fff"
             android:textAllCaps="false"
             android:id="@+id/adOptionsButt"
@@ -81,7 +81,7 @@
             />
 
         <TextView
-            android:text="Like"
+            android:text="@string/txt_like"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -93,7 +93,7 @@
             android:layout_marginBottom="2dp"/>
 
         <Button
-            android:text="Chat with Seller"
+            android:text="@string/btn_chat_with_seller"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/adChatButt"
@@ -172,7 +172,7 @@
 
 
                 <TextView
-                    android:text="loading..."
+                    android:text="@string/txt_loading"
                     android:layout_below="@id/adImagesScrollView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -196,7 +196,7 @@
                     android:layout_alignStart="@+id/adTitleTxt"/>
 
                 <TextView
-                    android:text="loading..."
+                    android:text="@string/txt_loading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -221,7 +221,7 @@
                     android:layout_alignStart="@+id/imageView14"/>
 
                 <TextView
-                    android:text="Price: "
+                    android:text="@string/txt_price"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
@@ -244,7 +244,7 @@
                     android:layout_alignStart="@+id/imageView16"/>
 
                 <TextView
-                    android:text="Condition: "
+                    android:text="@string/txt_condition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
@@ -268,7 +268,7 @@
                     android:layout_alignStart="@+id/imageView17"/>
 
                 <TextView
-                    android:text="Category: "
+                    android:text="@string/txt_category"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
@@ -291,7 +291,7 @@
                     android:layout_alignStart="@+id/imageView18"/>
 
                 <TextView
-                    android:text="Location: "
+                    android:text="@string/txt_location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
@@ -314,7 +314,7 @@
                     android:layout_alignStart="@+id/imageView19"/>
 
                 <Button
-                    android:text="Video:"
+                    android:text="@string/btn_video"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -341,7 +341,7 @@
                     android:layout_alignStart="@+id/imageView20"/>
 
                 <TextView
-                    android:text="loading..."
+                    android:text="@string/txt_loading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
@@ -365,7 +365,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:text="Seller"
+                    android:text="@string/txt_seller"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView15"
@@ -385,7 +385,7 @@
                     android:layout_alignStart="@+id/textView15"/>
 
                 <TextView
-                    android:text="username "
+                    android:text="@string/txt_user_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/adUsernameTxt"
@@ -399,7 +399,7 @@
                     android:textSize="12sp"/>
 
                 <TextView
-                    android:text="Joined: "
+                    android:text="@string/txt_joined_since"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/adJoinedTxt"
@@ -412,7 +412,7 @@
                     android:textSize="11sp"/>
 
                 <TextView
-                    android:text="Verified: "
+                    android:text="@string/txt_verified"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/adVerifiedTxt"
@@ -447,7 +447,7 @@
                     android:layout_alignStart="@+id/imageView20"/>
 
                 <Button
-                    android:text="Post/Read comments"
+                    android:text="@string/btn_Post_read_comments"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/adCommentsButt"
@@ -474,7 +474,7 @@
                     android:layout_marginBottom="20dp"/>
 
                 <Button
-                    android:text="Send Feedback"
+                    android:text="@string/btn_send_feedback"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/adFeedbackButt"

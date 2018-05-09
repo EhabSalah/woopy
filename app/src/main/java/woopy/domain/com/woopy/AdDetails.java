@@ -108,11 +108,11 @@ public class AdDetails extends AppCompatActivity {
               @Override
               public void onClick(View view) {
                   AlertDialog.Builder alert = new AlertDialog.Builder(AdDetails.this);
-                  alert.setMessage("Select option")
+                  alert.setMessage(getResources().getString(R.string.alert_select_option))
                       .setTitle(R.string.app_name)
 
                       // Report Ad
-                      .setPositiveButton("Report Ad", new DialogInterface.OnClickListener() {
+                      .setPositiveButton(getResources().getString(R.string.alert_report_ad), new DialogInterface.OnClickListener() {
                           @Override
                           public void onClick(DialogInterface dialogInterface, int i) {
                               // Pass objectID to the other Activity
@@ -126,7 +126,7 @@ public class AdDetails extends AppCompatActivity {
 
 
                       // Share Ad
-                      .setNegativeButton("Share", new DialogInterface.OnClickListener() {
+                      .setNegativeButton(getResources().getString(R.string.alert_share), new DialogInterface.OnClickListener() {
                               @Override
                               public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -140,11 +140,11 @@ public class AdDetails extends AppCompatActivity {
                                   intent.setType("image/jpeg");
                                   intent.putExtra(Intent.EXTRA_STREAM, uri);
                                   intent.putExtra(Intent.EXTRA_TEXT, "Check this out: '" + adObj.getString(Configs.ADS_TITLE) + "' on #woopy");
-                                  startActivity(Intent.createChooser(intent, "Share on..."));
+                                  startActivity(Intent.createChooser(intent, getResources().getString(R.string.alert_share_on)));
                               }
                       }})
 
-                      .setNeutralButton("Cancel", null)
+                      .setNeutralButton(getResources().getString(R.string.alert_cancel), null)
                       .setIcon(R.drawable.logo);
                   alert.create().show();
             }});
@@ -170,7 +170,7 @@ public class AdDetails extends AppCompatActivity {
 
                               // Seller has blocked you
                               if (hasBlocked.contains(ParseUser.getCurrentUser().getObjectId())) {
-                                  Configs.simpleAlert("Sorry, @" + sellerPointer.getString(Configs.USER_USERNAME) + " has blocked you, you can't chat with this user.", AdDetails.this);
+                                  Configs.simpleAlert(getResources().getString(R.string.toast_sorry)+", @" + sellerPointer.getString(Configs.USER_USERNAME) + getResources().getString(R.string.toast_has_blocked_you_you_cant_chat_with_this_user), AdDetails.this);
 
                               } else {
                                   // Pass objectID to the other Activity
@@ -184,7 +184,7 @@ public class AdDetails extends AppCompatActivity {
                       });
 
                   } else {
-                      Configs.loginAlert("You must be logged in to chat. Want to login now?", AdDetails.this);
+                      Configs.loginAlert(getResources().getString(R.string.toast_you_must_be_logged_in_to_chat_want_to_login_now), AdDetails.this);
                   }
              }});
 
@@ -201,7 +201,7 @@ public class AdDetails extends AppCompatActivity {
                 public void onClick(View view) {
                     if (ParseUser.getCurrentUser().getUsername() != null) {
 
-                        Configs.showPD("Please wait...", AdDetails.this);
+                        Configs.showPD(getResources().getString(R.string.alert_please_wait), AdDetails.this);
 
                         final ParseUser currUser = ParseUser.getCurrentUser();
 
@@ -253,7 +253,7 @@ public class AdDetails extends AppCompatActivity {
                                                     // Send push notification
                                                     final ParseUser sellerPointer = (ParseUser) adObj.get(Configs.ADS_SELLER_POINTER);
 
-                                                    final String pushMessage = "@" + currUser.getUsername() + " liked your Ad: " + adObj.getString(Configs.ADS_TITLE);
+                                                    final String pushMessage = "@" + currUser.getUsername() + getResources().getString(R.string.toast_liked_your_ad) + adObj.getString(Configs.ADS_TITLE);
 
                                                     HashMap<String, Object> params = new HashMap<String, Object>();
                                                     params.put("someKey", sellerPointer.getObjectId());
@@ -315,7 +315,7 @@ public class AdDetails extends AppCompatActivity {
                                                     adObj.saveInBackground();
 
                                                     // Put "Like" back to the txt
-                                                    likesTxt.setText("Like");
+                                                    likesTxt.setText(getResources().getString(R.string.txt_like));
 
                                                 }
                                             }
@@ -335,7 +335,7 @@ public class AdDetails extends AppCompatActivity {
 
                     // YOU'RE NOT LOGGED IN!
                     } else {
-                        Configs.loginAlert("You must be logged in to like this Ad. Want to login now?", AdDetails.this);
+                        Configs.loginAlert(getResources().getString(R.string.toast_You_must_be_logged_in_to_like_this_ad_want_to_login_now), AdDetails.this);
                     }
 
                 }});
@@ -377,7 +377,7 @@ public class AdDetails extends AppCompatActivity {
                             likesTxt.setText(String.valueOf(adObj.getNumber(Configs.ADS_LIKES)));
                         } else {
                             likeButt.setBackgroundResource(R.drawable.like_butt);
-                            likesTxt.setText("Like");
+                            likesTxt.setText(getResources().getString(R.string.txt_like));
                         }
 
                     // error
@@ -468,17 +468,17 @@ public class AdDetails extends AppCompatActivity {
         // Get price
         TextView priceTxt = findViewById(R.id.adPriceTxt);
         priceTxt.setTypeface(Configs.titRegular);
-        priceTxt.setText( "Price: " + adObj.getString(Configs.ADS_CURRENCY) + String.valueOf(adObj.getNumber(Configs.ADS_PRICE)));
+        priceTxt.setText( getResources().getString(R.string.txt_price) + adObj.getString(Configs.ADS_CURRENCY) + String.valueOf(adObj.getNumber(Configs.ADS_PRICE)));
 
         // Get condition
         TextView conditionTxt = findViewById(R.id.adConditionTxt);
         conditionTxt.setTypeface(Configs.titRegular);
-        conditionTxt.setText("Condition: " + adObj.getString(Configs.ADS_CONDITION));
+        conditionTxt.setText(getResources().getString(R.string.txt_condition) + adObj.getString(Configs.ADS_CONDITION));
 
         // Get category
         TextView categoryTxt = findViewById(R.id.adCategoryTxt);
         categoryTxt.setTypeface(Configs.titRegular);
-        categoryTxt.setText("Category: " + adObj.getString(Configs.ADS_CATEGORY));
+        categoryTxt.setText(getResources().getString(R.string.txt_category) + adObj.getString(Configs.ADS_CATEGORY));
 
 
         // Get Location (City, Country)
@@ -500,9 +500,9 @@ public class AdDetails extends AppCompatActivity {
                 // Show City/Country
                 TextView locationTxt = findViewById(R.id.adLocationTxt);
                 locationTxt.setTypeface(Configs.titRegular);
-                locationTxt.setText("Location: " + city + ", " + country);
+                locationTxt.setText(getResources().getString(R.string.txt_location) + city + ", " + country);
 
-            } else { Toast.makeText(getApplicationContext(), "Geocoder not present!", Toast.LENGTH_SHORT).show(); }
+            } else { Toast.makeText(getApplicationContext(), getResources().getString(R.string.toast_geocoder_not_present), Toast.LENGTH_SHORT).show(); }
         } catch (IOException e) { Configs.simpleAlert(e.getMessage(), AdDetails.this); }
 
 
@@ -511,10 +511,10 @@ public class AdDetails extends AppCompatActivity {
         Button watchVideoButt = findViewById(R.id.adWatchVideoButt);
         watchVideoButt.setTypeface(Configs.titSemibold);
         if (adObj.get(Configs.ADS_VIDEO) != null) {
-            watchVideoButt.setText("Video: Watch video");
+            watchVideoButt.setText(getResources().getString(R.string.toast_watch_video));
             watchVideoButt.setEnabled(true);
         } else {
-            watchVideoButt.setText("Video: N/A");
+            watchVideoButt.setText(getResources().getString(R.string.toast_Video));
             watchVideoButt.setEnabled(false);
         }
 
@@ -579,9 +579,9 @@ public class AdDetails extends AppCompatActivity {
                 verifiedTxt.setTypeface(Configs.titRegular);
                 if (sellerPointer.get(Configs.USER_EMAIL_VERIFIED) != null) {
                     if (sellerPointer.getBoolean(Configs.USER_EMAIL_VERIFIED)) {
-                        verifiedTxt.setText("Verified: Yes");
-                    } else { verifiedTxt.setText("Verified: No"); }
-                } else { verifiedTxt.setText("Verified: No"); }
+                        verifiedTxt.setText(getResources().getString(R.string.alert_verified_yes));
+                    } else { verifiedTxt.setText(getResources().getString(R.string.alert_verified_no)); }
+                } else { verifiedTxt.setText(getResources().getString(R.string.alert_verified_no)); }
 
 
 
@@ -599,7 +599,7 @@ public class AdDetails extends AppCompatActivity {
                             startActivity(i);
 
                         } else {
-                            Configs.loginAlert("You must be logged in to comment. Want to Login now?", AdDetails.this);
+                            Configs.loginAlert(getResources().getString(R.string.toast_you_must_be_logged_in_to_comment_want_to_login_now), AdDetails.this);
                         }
                 }});
 
@@ -621,7 +621,7 @@ public class AdDetails extends AppCompatActivity {
                           startActivity(i);
 
                       } else {
-                          Configs.loginAlert("You must be logged in to send a feedback. Want to login now?", AdDetails.this);
+                          Configs.loginAlert(getResources().getString(R.string.toast_you_must_be_logged_in_to_send_a_feedback_want_to_login_now), AdDetails.this);
                       }
                 }});
 

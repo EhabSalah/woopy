@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\SpOts\woopy\app\app.iml" filepath="E:\SpOts\woopy\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/woopy.iml" filepath="$PROJECT_DIR$/woopy.iml" />
-      <module fileurl="file://E:\SpOts\woopy\woopy.iml" filepath="E:\SpOts\woopy\woopy.iml" />
     </modules>
   </component>
 </project>

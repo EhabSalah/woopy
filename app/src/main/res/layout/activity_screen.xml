@@ -19,7 +19,7 @@
 
 
         <TextView
-            android:text="Activity"
+            android:text="@string/btn_activity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -54,7 +54,7 @@
             android:textAllCaps="false"
             android:background="@drawable/tab_home"
             android:layout_gravity="center_horizontal"
-            android:text="Browse"
+            android:text="@string/btn_browse"
             android:textColor="#555"
             android:backgroundTint="#555"
             android:paddingTop="40dp"
@@ -69,7 +69,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="10dp"
             android:paddingTop="40dp"
-            android:text="My Likes"
+            android:text="@string/btn_mylikes"
             android:textSize="8dp"
             android:backgroundTint="#555"
             android:textColor="#555"/>
@@ -82,7 +82,7 @@
             android:background="@drawable/tab_sell"
             android:layout_marginLeft="10dp"
             android:paddingTop="40dp"
-            android:text="Sell"
+            android:text="@string/btn_sell"
             android:textSize="8dp"
             android:layout_gravity="center_horizontal"
             android:textColor="#555"
@@ -96,7 +96,7 @@
             android:background="@drawable/tab_activity"
             android:layout_marginLeft="10dp"
             android:paddingTop="40dp"
-            android:text="Activity"
+            android:text="@string/btn_activity"
             android:textSize="8dp"
             android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/main_color"
@@ -110,7 +110,7 @@
             android:background="@drawable/tab_account"
             android:layout_marginLeft="10dp"
             android:paddingTop="40dp"
-            android:text="Account"
+            android:text="@string/btn_account"
             android:textSize="8dp"
             android:layout_gravity="center_horizontal"
             android:textColor="#555"
@@ -128,7 +128,7 @@
     </com.google.android.gms.ads.AdView>
 
     <TextView
-        android:text="Long press to delete"
+        android:text="@string/txt_long_press_to_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/actTopView"

@@ -29,7 +29,7 @@
             android:layout_marginRight="10dp"
             android:textSize="12sp"
             android:textColor="#fff"
-            android:hint="Search on woopy..."
+            android:hint="@string/edt_search_on_woopy"
             android:textColorHint="#f2f2f2"
             android:paddingLeft="10dp"
             android:singleLine="true"
@@ -41,7 +41,7 @@
             android:layout_marginLeft="48dp"/>
 
         <Button
-            android:text="Cancel"
+            android:text="@string/alert_cancel"
             android:layout_width="60dp"
             android:layout_height="44dp"
             android:id="@+id/alCancelButt"
@@ -91,7 +91,7 @@
             android:layout_height="80dp"/>
 
         <TextView
-            android:text="Your search did not match any listings. Try another search?"
+            android:text="@string/txt_your_search_did_not_match_any_listings_try_another_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/alNoSearchTxt"
@@ -144,7 +144,7 @@
             android:layout_height="16dp"/>
 
         <TextView
-            android:text="loading..."
+            android:text="@string/txt_loading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/alDistanceTxt"
@@ -165,7 +165,7 @@
             android:layout_alignStart="@+id/alSortByButt"/>
 
         <TextView
-            android:text="SORT BY"
+            android:text="@string/txt_sort_by"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/alsortlabel"
@@ -177,7 +177,7 @@
             android:layout_toEndOf="@+id/imageView9"/>
 
         <Button
-            android:text="Recent"
+            android:text="@string/btn_recent"
             android:layout_marginLeft="5dp"
             android:id="@+id/alSortByButt"
             android:layout_height="36dp"
@@ -213,7 +213,7 @@
             android:layout_marginStart="5dp"/>
 
         <Button
-            android:text="All"
+            android:text="@string/btn_all"
             android:id="@+id/alCategoryButt"
             android:layout_height="36dp"
             android:textAllCaps="false"
@@ -240,7 +240,7 @@
         </RelativeLayout>
 
         <TextView
-            android:text="CATEGORY"
+            android:text="@string/txt_CATEGORY"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/alcatlabel"
@@ -251,7 +251,7 @@
             android:layout_alignBottom="@+id/imageView8"/>
 
         <Button
-            android:text="New York, USA"
+            android:text="@string/btn_NewYorkUSA"
             android:id="@+id/alCityCountryButt"
             android:layout_height="36dp"
             android:textAllCaps="false"

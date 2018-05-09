@@ -23,4 +23,81 @@
     <string name="page3">Page 3</string>
     <string name="title_activity_image_preview">ImagePreview</string>
 
+    <!--       account.xml & class         -->
+    <string name="txt_loading">loading...</string>
+    <string name="btn_browse">Browse</string>
+    <string name="btn_mylikes">My Likes</string>
+    <string name="btn_sell">Sell</string>
+    <string name="btn_activity">Activity</string>
+    <string name="btn_account">Account</string>
+    <string name="txt_joined">Joined:</string>
+    <string name="txt_verified">Verified:</string>
+    <string name="btn_feedbacks">Feedbacks</string>
+    <string name="btn_edit_profile">Edit profile</string>
+    <string name="btn_logout">Logout</string>
+    <string name="txt_my_ads">MY ADS</string>
+    <string name="alert_logout">Are you sure you want to logout?</string>
+    <string name="alert_confirm_logout">OK</string>
+    <string name="alert_loging_out">Logging out...</string>
+    <string name="alert_cancel">Cancel</string>
+    <string name="txt_joined_since">Joined: </string>
+    <string name="alert_verified_yes">Verified: Yes</string>
+    <string name="alert_verified_no">Verified: No</string>
+    <string name="alert_please_wait">Please wait...</string>
+    <!--     account.xml & class done        -->
+
+    <!--       activity_screen.xml & class         -->
+    <string name="txt_long_press_to_delete">Long press to delete</string>
+    <string name="toast_activity_removed">Activity removed!</string>
+    <!--     account.xml & class done        -->
+
+    <!--       ad_details.xml & class         -->
+    <string name="txt_ad_details">Ad details</string>
+    <string name="btn_dots">•••</string>
+    <string name="txt_like">Like</string>
+    <string name="btn_chat_with_seller">Chat with Seller</string>
+    <string name="txt_price">Price: </string>
+    <string name="txt_condition">Condition: </string>
+    <string name="txt_category">Category: </string>
+    <string name="txt_location">Location: </string>
+    <string name="btn_video">Video:</string>
+    <string name="txt_seller">Seller</string>
+    <string name="txt_user_name">username </string>
+    <string name="btn_Post_read_comments">Post/Read comments</string>
+    <string name="btn_send_feedback">Send Feedback</string>
+    <string name="alert_select_option">Select option</string>
+    <string name="alert_report_ad">Report Ad</string>
+    <string name="alert_share">Share</string>
+    <string name="alert_share_on">Share on...</string>
+    <string name="toast_sorry">Sorry</string>
+    <string name="toast_has_blocked_you_you_cant_chat_with_this_user">has blocked you, you can not chat with this user.</string>
+    <string name="toast_you_must_be_logged_in_to_chat_want_to_login_now">You must be logged in to chat. Want to login now?</string>
+    <string name="toast_You_must_be_logged_in_to_like_this_ad_want_to_login_now">You must be logged in to like this Ad. Want to login now?</string>
+    <string name="toast_liked_your_ad"> liked your Ad: </string>
+    <string name="toast_geocoder_not_present">Geocoder not present!</string>
+    <string name="toast_watch_video">"Video: Watch video"</string>
+    <string name="toast_Video">Video: N/A</string>
+    <string name="toast_you_must_be_logged_in_to_comment_want_to_login_now">You must be logged in to comment. Want to Login now?</string>
+    <string name="toast_you_must_be_logged_in_to_send_a_feedback_want_to_login_now">You must be logged in to send a feedback. Want to login now?</string>
+    <!--     account.xml & class done        -->
+
+    <!--       ad_details.xml & class         -->
+    <string name="edt_search_on_woopy">Search on woopy...</string>
+    <string name="txt_your_search_did_not_match_any_listings_try_another_search">Your search did not match any listings. Try another search?</string>
+    <string name="txt_sort_by">SORT BY</string>
+    <string name="btn_recent">Recent</string>
+    <string name="btn_all">All</string>
+    <string name="txt_CATEGORY">CATEGORY</string>
+    <string name="btn_NewYorkUSA">New York, USA</string>
+    <string name="alert_you_must_type_somehting">You must type somehting!</string>
+    <string name="toast_You_must_be_loggen_in_to_see_your_Chats_want_to_login_now">You must be loggen in to see your Chats. Want to login now?</string>
+    <string name="toast_Failed_to_get_your_Location">Failed to get your Location.</string>
+    <string name="toast_Go_into_Settings_and_make_sure_Location_Service_is_enabled">Go into Settings and make sure Location Service is enabled!</string>
+    <string name="alert_Mi_FROM"> Mi FROM</string>
+    <string name="toast_You_must_be_logged_in_to_see_and_post_comments_Want_to_login_now">You must be logged in to see and post comments. Want to login now?</string>
+    <string name="alert_Report_Ad">Report Ad</string>
+    <string name="toast_You_must_be_logged_in_to_like_this_Ad_Want_to_login_now">You must be logged in to like this Ad. Want to login now?</string>
+    <!--     account.xml & class done        -->
+
+
 </resources>

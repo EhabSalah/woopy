@@ -26,7 +26,7 @@
             android:layout_marginRight="10dp"/>
 
         <TextView
-            android:text="loading..."
+            android:text="@string/txt_loading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -57,7 +57,7 @@
             android:textAllCaps="false"
             android:background="@drawable/tab_home"
             android:layout_gravity="center_horizontal"
-            android:text="Browse"
+            android:text="@string/btn_browse"
             android:textColor="#555"
             android:backgroundTint="#555"
             android:paddingTop="40dp"
@@ -72,7 +72,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="10dp"
             android:paddingTop="40dp"
-            android:text="My Likes"
+            android:text="@string/btn_mylikes"
             android:textSize="8dp"
             android:backgroundTint="#555"
             android:textColor="#555"/>
@@ -85,7 +85,7 @@
             android:background="@drawable/tab_sell"
             android:layout_marginLeft="10dp"
             android:paddingTop="40dp"
-            android:text="Sell"
+            android:text="@string/btn_sell"
             android:textSize="8dp"
             android:layout_gravity="center_horizontal"
             android:textColor="#555"
@@ -99,7 +99,7 @@
             android:background="@drawable/tab_activity"
             android:layout_marginLeft="10dp"
             android:paddingTop="40dp"
-            android:text="Activity"
+            android:text="@string/btn_activity"
             android:textSize="8dp"
             android:layout_gravity="center_horizontal"
             android:backgroundTint="#555"
@@ -113,7 +113,7 @@
             android:background="@drawable/tab_account"
             android:layout_marginLeft="10dp"
             android:paddingTop="40dp"
-            android:text="Account"
+            android:text="@string/btn_account"
             android:textSize="8dp"
             android:layout_gravity="center_horizontal"
             android:textColor="#fa334a"
@@ -121,7 +121,7 @@
     </LinearLayout>
 
     <TextView
-        android:text="loading..."
+        android:text="@string/txt_loading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/accAvatarImg"
@@ -134,7 +134,7 @@
         android:maxLines="1"/>
 
     <TextView
-        android:text="Joined:"
+        android:text="@string/txt_joined"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/accFullNameTxt"
@@ -144,7 +144,7 @@
         android:layout_marginTop="5dp"/>
 
     <TextView
-        android:text="Verified:"
+        android:text="@string/txt_verified"
         android:textSize="11sp"
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
@@ -154,7 +154,7 @@
         android:id="@+id/accVerifiedTxt"/>
 
     <Button
-        android:text="Feedbacks"
+        android:text="@string/btn_feedbacks"
         android:layout_width="wrap_content"
         android:layout_below="@+id/accAvatarImg"
         android:layout_alignStart="@+id/accAvatarImg"
@@ -167,7 +167,7 @@
         android:layout_height="38dp"/>
 
     <Button
-        android:text="Edit profile"
+        android:text="@string/btn_edit_profile"
         android:layout_width="wrap_content"
         android:id="@+id/accEditProfileButt"
         android:textAllCaps="false"
@@ -181,7 +181,7 @@
         android:layout_height="38dp"/>
 
     <Button
-        android:text="Logout"
+        android:text="@string/btn_logout"
         android:layout_width="wrap_content"
         android:id="@+id/accLogoutButt"
         android:textAllCaps="false"
@@ -196,7 +196,7 @@
         android:layout_height="38dp"/>
 
     <TextView
-        android:text="MY ADS"
+        android:text="@string/txt_my_ads"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/accEditProfileButt"
