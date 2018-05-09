@@ -20,7 +20,7 @@
 
 
         <TextView
-            android:text="loading..."
+            android:text="@string/txt_loading"
             android:layout_marginBottom="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
         <Button
             android:layout_width="44dp"
             android:layout_height="44dp"
-            android:text="Send"
+            android:text="@string/btn_Send"
             android:textColor="#fff"
             android:textAllCaps="false"
             android:id="@+id/sfSendButt"
@@ -59,7 +59,7 @@
             android:layout_alignParentEnd="true"/>
 
         <TextView
-            android:text="Send Feedback"
+            android:text="@string/btn_Send_Feedback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/sfTxt"
@@ -75,7 +75,7 @@
     </RelativeLayout>
 
     <TextView
-        android:text="TAP A DOT TO RATE"
+        android:text="@string/btn_TAP_A_DOT_TO_RATE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sfTopView"
@@ -149,7 +149,7 @@
     </RelativeLayout>
 
     <TextView
-        android:text="WRITE A SHORT REVIEW"
+        android:text="@string/btn_WRITE_A_SHORT_REVIEW"
         android:textSize="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

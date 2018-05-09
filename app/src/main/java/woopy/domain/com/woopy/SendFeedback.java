@@ -144,7 +144,7 @@ public class SendFeedback extends AppCompatActivity {
 
                 TextView usernameTxt = findViewById(R.id.sfUsernameTxt);
                 usernameTxt.setTypeface(Configs.titRegular);
-                usernameTxt.setText("to @" + sellerObj.getString(Configs.USER_USERNAME));
+                usernameTxt.setText(R.string.alert_to + sellerObj.getString(Configs.USER_USERNAME));
 
             // MARK: - SEND FEEDBACK BUTTON
             Button sendButt = findViewById(R.id.sfSendButt);
@@ -152,11 +152,11 @@ public class SendFeedback extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     dismissKeyboard();
-                    Configs.showPD("Please wait...", SendFeedback.this);
+                    Configs.showPD(getResources().getString(R.string.alert_please_wait), SendFeedback.this);
 
                     if (reviewTxt.getText().toString().matches("") || starNr == 0) {
                         Configs.hidePD();
-                        Configs.simpleAlert("You must rate at least 1 star and write a show review!", SendFeedback.this);
+                        Configs.simpleAlert(getResources().getString(R.string.alert_Yo), SendFeedback.this);
 
 
                     } else {
@@ -173,7 +173,7 @@ public class SendFeedback extends AppCompatActivity {
                             public void done(ParseException e) {
                                 if (e == null) {
                                     Configs.hidePD();
-                                    Configs.simpleAlert("Your feedback has been sent!", SendFeedback.this);
+                                    Configs.simpleAlert(getResources().getString(R.string.alert_Your_feedback_has_been_sent), SendFeedback.this);
 
 
 

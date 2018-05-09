@@ -261,4 +261,13 @@
     <string name="txt_default">* if you do not choose a location, your current one will be set by default </string>
     <!--     sell_edit_item.xml & class done        -->
 
+    <!--     sendfeedback.xml & class done        -->
+    <string name="alert_to">to @</string>
+    <string name="alert_Yo">You must rate at least 1 star and write a show review!</string>
+    <string name="alert_Your_feedback_has_been_sent">Your feedback has been sent!</string>
+    <string name="btn_Send_Feedback">Send Feedback</string>
+    <string name="btn_TAP_A_DOT_TO_RATE">TAP A DOT TO RATE</string>
+    <string name="btn_WRITE_A_SHORT_REVIEW">WRITE A SHORT REVIEW</string>
+    <!--     sendfeedback.xml & class done        -->
+
 </resources>
