@@ -9,16 +9,25 @@ package woopy.domain.com.woopy;
 
 -------------------------------*/
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
+import java.util.Locale;
+
 public class SplashScreen extends AppCompatActivity {
 
     private static int splashInterval = 2000;
+
+    SharedPreferences.Editor editor;
+    SharedPreferences prefs;
+    private static Locale myLocale;
+    String langPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +37,16 @@ public class SplashScreen extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.splash_screen);
+
+        prefs = getSharedPreferences("CommonPrefs", MODE_PRIVATE);
+        String strPref = prefs.getString("App_Language", "ar");
+        if(strPref.equals("en"))
+        {
+            changeLang("en");
+        }
+        else{
+            changeLang("ar");
+        }
 
         new Handler().postDelayed(new Runnable() {
 
@@ -43,5 +62,25 @@ public class SplashScreen extends AppCompatActivity {
         }, splashInterval);
 
     };
+
+    public void changeLang(String lang) {
+        if (lang.equalsIgnoreCase(""))
+            return;
+        myLocale = new Locale(lang);
+        Locale.setDefault(myLocale);
+        android.content.res.Configuration config = new android.content.res.Configuration();
+        config.locale = myLocale;
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+        saveLocale(lang);
+
+    }
+    public void saveLocale(String lang)
+    {
+        langPref = "App_Language";
+        prefs =getSharedPreferences("CommonPrefs", Activity.MODE_PRIVATE);
+        editor = prefs.edit();
+        editor.putString(langPref, lang);
+        editor.commit();
+    }
 
 }
