@@ -117,7 +117,7 @@ public class DistanceMap extends AppCompatActivity implements OnMapReadyCallback
         // Init distanceTxt
         distanceTxt = findViewById(R.id.mapDistanceTxt);
         distanceTxt.setTypeface(Configs.titRegular);
-        distanceTxt.setText(String.valueOf((int) Configs.distanceInMiles) + " miles around your location");
+        distanceTxt.setText(String.valueOf((int) Configs.distanceInMiles) + getResources().getString(R.string.toast_miles_around_your_location));
 
 
 
@@ -186,7 +186,7 @@ public class DistanceMap extends AppCompatActivity implements OnMapReadyCallback
                 map.clear();
 
                 distance = seekBar.getProgress();
-                distanceTxt.setText(String.valueOf(distance) + " miles around your location");
+                distanceTxt.setText(String.valueOf(distance) + getResources().getString(R.string.toast_miles_around_your_location));
 
                 // Set Map zoom
                 radius = distance * 1609;
@@ -301,7 +301,7 @@ public class DistanceMap extends AppCompatActivity implements OnMapReadyCallback
 
         // NO GPS location found!
         } else {
-            Configs.simpleAlert("Failed to get your Location.\nGo into Settings and make sure Location Service is enabled!", DistanceMap.this);
+            Configs.simpleAlert(getResources().getString(R.string.toast_Failed_to_get_your_Location)+"\n"+getResources().getString(R.string.toast_Go_into_Settings_and_make_sure_Location_Service_is_enabled), DistanceMap.this);
 
             // Set New York City as default currentLocation
             aLocation = new Location("provider");

@@ -106,11 +106,11 @@ public class Comments extends AppCompatActivity {
               public void onClick(View view) {
 
                   if (commEditText.getText().toString().matches("")) {
-                      Configs.simpleAlert("You must type something!", Comments.this);
+                      Configs.simpleAlert(getResources().getString(R.string.alert_you_must_type_somehting), Comments.this);
 
                   } else {
                       dismissKeyboard();
-                      Configs.showPD("Please wait..", Comments.this);
+                      Configs.showPD(getResources().getString(R.string.alert_please_wait), Comments.this);
 
                       final ParseObject commObj = new ParseObject(Configs.COMMENTS_CLASS_NAME);
                       ParseUser currentUser = ParseUser.getCurrentUser();
@@ -132,7 +132,7 @@ public class Comments extends AppCompatActivity {
                                   adObj.getParseObject(Configs.ADS_SELLER_POINTER).fetchIfNeededInBackground(new GetCallback<ParseObject>() {
                                       public void done(final ParseObject sellerPointer, ParseException e) {
 
-                                          final String pushMessage = "@" + currUser.getString(Configs.USER_USERNAME) + " commented your Ad: '" + adObj.getString(Configs.ADS_TITLE) + "'";
+                                          final String pushMessage = "@" + currUser.getString(Configs.USER_USERNAME) + getResources().getString(R.string.alert_commented_your_Ad) + adObj.getString(Configs.ADS_TITLE) + "'";
 
                                           HashMap<String, Object> params = new HashMap<String, Object>();
                                           params.put("someKey", sellerPointer.getObjectId());
@@ -226,7 +226,7 @@ public class Comments extends AppCompatActivity {
 
     // MARK: - QUERY COMMENTS --------------------------------------------------------------------
     void queryComments() {
-        Configs.showPD("Please wait...", Comments.this);
+        Configs.showPD(getResources().getString(R.string.alert_please_wait), Comments.this);
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery(Configs.COMMENTS_CLASS_NAME);
         query.whereEqualTo(Configs.COMMENTS_AD_POINTER, adObj);

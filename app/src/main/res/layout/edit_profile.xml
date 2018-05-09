@@ -21,7 +21,7 @@
 
 
         <TextView
-            android:text="Edit Profile"
+            android:text="@string/txt_Edit_Profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -48,7 +48,7 @@
         <Button
             android:layout_width="44dp"
             android:layout_height="44dp"
-            android:text="Save"
+            android:text="@string/btn_Save"
             android:textColor="#fff"
             android:textAllCaps="false"
             android:id="@+id/epSaveButt"
@@ -93,7 +93,7 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/rounded_corner"
                     android:paddingLeft="5dp"
-                    android:hint="type a username"
+                    android:hint="@string/edt_type_username"
                     android:singleLine="true"
                     android:maxLines="1"
                     android:layout_alignParentEnd="true"
@@ -102,7 +102,7 @@
                     android:layout_alignBottom="@+id/textView16"/>
 
                 <TextView
-                    android:text="Username: "
+                    android:text="@string/txt_Username"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_marginTop="14dp"
@@ -117,7 +117,7 @@
 
                 <TextView
                     android:layout_marginTop="10dp"
-                    android:text="Full Name: "
+                    android:text="@string/txt_Full_Name"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:id="@+id/textView17"
@@ -140,7 +140,7 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/rounded_corner"
                     android:paddingLeft="5dp"
-                    android:hint="type your full name"
+                    android:hint="@string/edt_type_your_full_name"
                     android:singleLine="true"
                     android:maxLines="1"
                     android:layout_alignParentEnd="true"
@@ -151,7 +151,7 @@
 
                 <TextView
                     android:layout_marginTop="10dp"
-                    android:text="Website: "
+                    android:text="@string/txt_Website"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:id="@+id/textView18"
@@ -172,7 +172,7 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/rounded_corner"
                     android:paddingLeft="5dp"
-                    android:hint="ex: http://mywebsite.com"
+                    android:hint="@string/edt_ex_http_mywebsite_com"
                     android:singleLine="true"
                     android:maxLines="1"
                     android:layout_alignParentEnd="true"
@@ -185,7 +185,7 @@
 
                 <TextView
                     android:layout_marginTop="10dp"
-                    android:text="About me: "
+                    android:text="@string/txt_About_me"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:id="@+id/textView20"
@@ -206,7 +206,7 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/rounded_corner"
                     android:paddingLeft="5dp"
-                    android:hint="type something about you"
+                    android:hint="@string/edt_type_something_about_you"
                     android:gravity="top"
                     android:paddingTop="5dp"
                     android:layout_alignBaseline="@+id/textView20"
@@ -223,7 +223,7 @@
                     android:layout_marginTop="21dp"/>
 
                 <TextView
-                    android:text="Photo: "
+                    android:text="@string/txt_Photo"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
                     android:id="@+id/textView21"
@@ -233,7 +233,7 @@
                     android:layout_alignStart="@+id/textView20"/>
 
                 <TextView
-                    android:text="Tap to change photo"
+                    android:text="@string/txt_Tap_to_change_photo"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView22"
                     android:textSize="10sp"
@@ -243,7 +243,7 @@
                     android:layout_toEndOf="@+id/textView17"/>
 
                 <Button
-                    android:text="Reset Password"
+                    android:text="@string/btn_Reset_Password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/epResetPasswordButt"
@@ -257,7 +257,7 @@
 
 
                 <Button
-                    android:text="Read Terms of Service"
+                    android:text="@string/btn_Read_Terms_of_Service"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/epTOSbutt"

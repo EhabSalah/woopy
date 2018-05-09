@@ -357,7 +357,7 @@ public class Configs extends Application {
         AlertDialog.Builder alert = new AlertDialog.Builder(activity);
         alert.setMessage(mess)
             .setTitle(R.string.app_name)
-            .setPositiveButton("OK", null)
+            .setPositiveButton(R.string.btn_OK, null)
             .setIcon(R.drawable.logo);
         alert.create().show();
     }
@@ -370,13 +370,13 @@ public class Configs extends Application {
         AlertDialog.Builder alert = new AlertDialog.Builder(activity);
         alert.setMessage(mess)
                 .setTitle(R.string.app_name)
-                .setPositiveButton("Login", new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.btn_login, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Intent intent = new Intent(activity, Wizard.class);
                         activity.startActivity(intent);
                     }})
-                .setNegativeButton("Cancel", null)
+                .setNegativeButton(R.string.alert_cancel, null)
                 .setIcon(R.drawable.logo);
         alert.create().show();
     }

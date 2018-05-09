@@ -95,9 +95,9 @@ public class EditProfile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder alert = new AlertDialog.Builder(EditProfile.this);
-                alert.setMessage("Select source")
+                alert.setMessage(R.string.alert_Select_source)
                         .setTitle(R.string.app_name)
-                        .setPositiveButton("Take a Picture", new DialogInterface.OnClickListener() {
+                        .setPositiveButton(R.string.alert_Take_Picture, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 if (!mmp.checkPermissionForCamera()) {
@@ -107,7 +107,7 @@ public class EditProfile extends AppCompatActivity {
                                 }
                             }})
 
-                        .setNegativeButton("Pick from Gallery", new DialogInterface.OnClickListener() {
+                        .setNegativeButton(R.string.alert_Pick_from_Gallery, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 if (!mmp.checkPermissionForReadExternalStorage()) {
@@ -117,7 +117,7 @@ public class EditProfile extends AppCompatActivity {
                                 }
                             }})
 
-                        .setNeutralButton("Cancel", null)
+                        .setNeutralButton(R.string.alert_cancel, null)
                         .setIcon(R.drawable.logo);
                 alert.create().show();
         }});
@@ -135,10 +135,10 @@ public class EditProfile extends AppCompatActivity {
               ParseUser currUser = ParseUser.getCurrentUser();
 
               if (usernameTxt.getText().toString().matches("") || fullnameTxt.getText().toString().matches("") ) {
-                  Configs.simpleAlert("You must insert at least a username and your full name!", EditProfile.this);
+                  Configs.simpleAlert(getResources().getString(R.string.alert_You_must_insert_at_least_a_username_and_your_full_name), EditProfile.this);
 
               } else {
-                  Configs.showPD("Please wait...", EditProfile.this);
+                  Configs.showPD(getResources().getString(R.string.alert_please_wait), EditProfile.this);
                   dismissKeyboard();
 
                   currUser.put(Configs.USER_USERNAME,  usernameTxt.getText().toString());
@@ -155,7 +155,7 @@ public class EditProfile extends AppCompatActivity {
                       public void done(ParseException e) {
                           if (e == null) {
                               Configs.hidePD();
-                              Configs.simpleAlert("Your Profile has been updated!", EditProfile.this);
+                              Configs.simpleAlert(getResources().getString(R.string.alert_Your_Profile_has_been_updated), EditProfile.this);
                           } else {
                               Configs.hidePD();
                               Configs.simpleAlert(e.getMessage(), EditProfile.this);
@@ -177,23 +177,23 @@ public class EditProfile extends AppCompatActivity {
               AlertDialog.Builder alert = new AlertDialog.Builder(ctx)
               .setTitle(R.string.app_name)
               .setIcon(R.drawable.logo)
-              .setMessage("Type the valid email address you've used to register on this app");
+              .setMessage(getResources().getString(R.string.alert_Type_the_valid_email_address_you_have_used_to_register_on_this_app));
 
               // Add an EditTxt
               final EditText editTxt = new EditText (EditProfile.this);
               editTxt.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
               alert.setView(editTxt)
-              .setNegativeButton("Cancel", null)
-              .setPositiveButton("Reset Password", new DialogInterface.OnClickListener() {
+              .setNegativeButton(R.string.alert_cancel, null)
+              .setPositiveButton(R.string.alert_Reset_Password, new DialogInterface.OnClickListener() {
                   public void onClick(DialogInterface dialog, int whichButton) {
                       // Reset password
                       ParseUser.requestPasswordResetInBackground(editTxt.getText().toString(), new RequestPasswordResetCallback() {
                       public void done(ParseException error) {
                           if (error == null) {
                               AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
-                              builder.setMessage("We've sent you an email to reset your password!")
+                              builder.setMessage(R.string.alert_We_ve_sent_you_an_email_to_reset_your_password)
                               .setTitle(R.string.app_name)
-                              .setPositiveButton("OK", null);
+                              .setPositiveButton(R.string.btn_OK, null);
                               AlertDialog dialog = builder.create();
                               dialog.setIcon(R.drawable.logo);
                               dialog.show();
@@ -280,7 +280,7 @@ public class EditProfile extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent, "Select Image"), GALLERY);
+        startActivityForResult(Intent.createChooser(intent, getResources().getString(R.string.alert_Select_Image)), GALLERY);
     }
 
 

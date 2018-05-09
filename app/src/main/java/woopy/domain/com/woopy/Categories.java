@@ -85,7 +85,7 @@ public class Categories extends AppCompatActivity {
                   categories.clear();
                   finish();
               } else {
-                  Configs.simpleAlert("Select a Category, or tap Cancel!", Categories.this);
+                  Configs.simpleAlert(getResources().getString(R.string.alert_Select_a_Category_or_tap_Cancel), Categories.this);
         }}});
 
 
@@ -112,7 +112,7 @@ public class Categories extends AppCompatActivity {
 
     // MARK: - QUERY CATEGORIES ---------------------------------------------------------------
     void queryCategories() {
-        Configs.showPD("Please wait...", Categories.this);
+        Configs.showPD(getResources().getString(R.string.alert_please_wait), Categories.this);
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery(Configs.CATEGORIES_CLASS_NAME);
         query.findInBackground(new FindCallback<ParseObject>() {

@@ -98,7 +98,7 @@ public class Chats extends AppCompatActivity {
 
     // MARK: - QUERY CHATS ----------------------------------------------------------------------
     void queryChats() {
-        Configs.showPD("Please wait...", Chats.this);
+        Configs.showPD(getResources().getString(R.string.alert_please_wait), Chats.this);
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery(Configs.CHATS_CLASS_NAME);
         query.include(Configs.USER_CLASS_NAME);
@@ -219,7 +219,7 @@ public class Chats extends AppCompatActivity {
 
                                                         // otherUser user has blocked you
                                                         if (blockedUsers.contains(currentUser.getObjectId())) {
-                                                            Configs.simpleAlert("Sorry, @" + otherUser.getString(Configs.USER_USERNAME) + " has blocked you. You can't chat with this user.", Chats.this);
+                                                            Configs.simpleAlert(getResources().getString(R.string.toast_sorry)+", @" + otherUser.getString(Configs.USER_USERNAME) + getResources().getString(R.string.toast_has_blocked_you_you_cant_chat_with_this_user), Chats.this);
 
 
                                                         // You can chat with otherUser

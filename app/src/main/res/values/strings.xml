@@ -49,7 +49,7 @@
     <!--       activity_screen.xml & class         -->
     <string name="txt_long_press_to_delete">Long press to delete</string>
     <string name="toast_activity_removed">Activity removed!</string>
-    <!--     account.xml & class done        -->
+    <!--     activity_screen.xml & class done        -->
 
     <!--       ad_details.xml & class         -->
     <string name="txt_ad_details">Ad details</string>
@@ -79,9 +79,9 @@
     <string name="toast_Video">Video: N/A</string>
     <string name="toast_you_must_be_logged_in_to_comment_want_to_login_now">You must be logged in to comment. Want to Login now?</string>
     <string name="toast_you_must_be_logged_in_to_send_a_feedback_want_to_login_now">You must be logged in to send a feedback. Want to login now?</string>
-    <!--     account.xml & class done        -->
+    <!--     ad_details.xml & class done        -->
 
-    <!--       ad_details.xml & class         -->
+    <!--       ad_list.xml & class         -->
     <string name="edt_search_on_woopy">Search on woopy...</string>
     <string name="txt_your_search_did_not_match_any_listings_try_another_search">Your search did not match any listings. Try another search?</string>
     <string name="txt_sort_by">SORT BY</string>
@@ -97,7 +97,62 @@
     <string name="toast_You_must_be_logged_in_to_see_and_post_comments_Want_to_login_now">You must be logged in to see and post comments. Want to login now?</string>
     <string name="alert_Report_Ad">Report Ad</string>
     <string name="toast_You_must_be_logged_in_to_like_this_Ad_Want_to_login_now">You must be logged in to like this Ad. Want to login now?</string>
-    <!--     account.xml & class done        -->
+    <!--     ad_list.xml & class done        -->
+
+    <!--       category.xml & class         -->
+    <string name="btn_Done">Done</string>
+    <string name="txt_Choose_category">Choose category</string>
+    <string name="alert_Select_a_Category_or_tap_Cancel">Select a Category, or tap Cancel!</string>
+    <!--     category.xml & class done        -->
+
+    <!--       chats.xml & class         -->
+    <string name="txt_Chats">Chats</string>
+    <!--     chats.xml & class done        -->
+
+    <!--       comments.xml & class         -->
+    <string name="alert_commented_your_Ad">commented your Ad: </string>
+    <string name="txt_Comments">Comments</string>
+    <string name="btn_Send">Send </string>
+    <string name="edt_Type_here">Type here...</string>
+    <!--     comments.xml & class done        -->
+
+    <!--     config.xml & class done        -->
+    <string name="btn_OK">OK</string>
+    <string name="btn_login">Login</string>
+    <!--     config.xml & class done        -->
+
+    <!--     distance_map.xml & class done        -->
+    <string name="txt_Set_distance">Set distance</string>
+    <string name="txt_50_miles_around_your_location">50 miles around your location</string>
+    <string name="edt_Type_a_location_and_hit_search">Type a location and hit search </string>
+    <string name="toast_miles_around_your_location"> miles around your location</string>
+    <!--     distance_map.xml & class done        -->
+
+    <!--     edit_profile.xml & class done        -->
+    <string name="alert_Pick_from_Gallery">Pick from Gallery</string>
+    <string name="alert_Take_Picture">Take a Picture</string>
+    <string name="alert_Select_source">Select source</string>
+    <string name="alert_You_must_insert_at_least_a_username_and_your_full_name">You must insert at least a username and your full name!</string>
+    <string name="alert_Your_Profile_has_been_updated">Your Profile has been updated!</string>
+    <string name="alert_Type_the_valid_email_address_you_have_used_to_register_on_this_app">Type the valid email address you have used to register on this app</string>
+    <string name="alert_Reset_Password">Reset Password</string>
+    <string name="alert_We_ve_sent_you_an_email_to_reset_your_password">We have sent you an email to reset your password!</string>
+    <string name="alert_Select_Image">Select Image</string>
+    <string name="txt_Edit_Profile">Edit Profile</string>
+    <string name="btn_Save">Save</string>
+    <string name="edt_type_username">type a username</string>
+    <string name="txt_Username">Username: </string>
+    <string name="txt_Full_Name">Full Name: </string>
+    <string name="edt_type_your_full_name">type your full name</string>
+    <string name="txt_Website">Website: </string>
+    <string name="edt_ex_http_mywebsite_com">ex: http://mywebsite.com</string>
+    <string name="txt_About_me">About me: </string>
+    <string name="edt_type_something_about_you">type something about you</string>
+    <string name="txt_Photo">Photo: </string>
+    <string name="txt_Tap_to_change_photo">Tap to change photo</string>
+    <string name="btn_Reset_Password">Reset Password</string>
+    <string name="btn_Read_Terms_of_Service">Read Terms of Service</string>
+    <!--     edit_profile.xml & class done        -->
 
 
 </resources>
