@@ -221,7 +221,7 @@ public class Home extends AppCompatActivity {
                     }
 
                 // No text -> No search
-                } else { Configs.simpleAlert("You must type somehting!", Home.this); }
+                } else { Configs.simpleAlert(getResources().getString(R.string.alert_you_must_type_somehting), Home.this); }
 
 
                 return false;
@@ -265,7 +265,7 @@ public class Home extends AppCompatActivity {
               if (ParseUser.getCurrentUser().getUsername() != null) {
                   startActivity(new Intent(Home.this, Chats.class));
               } else {
-                  Configs.loginAlert("You must be logged in to see your Chats. Want to login now?", Home.this);
+                  Configs.loginAlert(getResources().getString(R.string.alert_You_must_be_logged_in_to_see_your_Chats_Want_to_login_now), Home.this);
               }
         }});
 
@@ -289,7 +289,7 @@ public class Home extends AppCompatActivity {
 
     // MARK: - QUERY CATEGORIES ----------------------------------------------------------------------
     void queryCategories() {
-        Configs.showPD("Please wait...", Home.this);
+        Configs.showPD(getResources().getString(R.string.alert_please_wait), Home.this);
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery(Configs.CATEGORIES_CLASS_NAME);
         query.findInBackground(new FindCallback<ParseObject>() {

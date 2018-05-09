@@ -20,7 +20,7 @@
         android:layout_below="@+id/textView2"/>
 
     <TextView
-        android:text="PINCH TO ZOOM | TAP TO CLOSE "
+        android:text="@string/txt_PINCH_TO_ZOOM_TAP_TO_CLOSE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

@@ -86,7 +86,7 @@ public class Feedbacks extends AppCompatActivity {
 
     // MARK: - QUERY FEEDBACKS ------------------------------------------------------------
     void queryFeedbacks() {
-        Configs.showPD("Please wait...", Feedbacks.this);
+        Configs.showPD(getResources().getString(R.string.alert_please_wait), Feedbacks.this);
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery(Configs.FEEDBACKS_CLASS_NAME);
         query.whereEqualTo(Configs.FEEDBACKS_SELLER_POINTER, userObj);

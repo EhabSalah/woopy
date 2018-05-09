@@ -213,9 +213,9 @@ public class InboxActivity extends AppCompatActivity {
           @Override
           public void onClick(View view) {
               AlertDialog.Builder alert = new AlertDialog.Builder(InboxActivity.this);
-              alert.setMessage("Select source")
+              alert.setMessage(R.string.alert_Select_source)
                       .setTitle(R.string.app_name)
-                      .setPositiveButton("Take a Picture", new DialogInterface.OnClickListener() {
+                      .setPositiveButton(R.string.alert_Take_Picture, new DialogInterface.OnClickListener() {
                           @Override
                           public void onClick(DialogInterface dialogInterface, int i) {
                               if (!mmp.checkPermissionForCamera()) {
@@ -225,7 +225,7 @@ public class InboxActivity extends AppCompatActivity {
                               }
                           }})
 
-                      .setNegativeButton("Pick from Gallery", new DialogInterface.OnClickListener() {
+                      .setNegativeButton(R.string.alert_Pick_from_Gallery, new DialogInterface.OnClickListener() {
                           @Override
                           public void onClick(DialogInterface dialogInterface, int i) {
                               if (!mmp.checkPermissionForReadExternalStorage()) {
@@ -235,7 +235,7 @@ public class InboxActivity extends AppCompatActivity {
                               }
                           }})
 
-                      .setNeutralButton("Cancel", null)
+                      .setNeutralButton(R.string.alert_cancel, null)
                       .setIcon(R.drawable.logo);
               alert.create().show();
          }});
@@ -250,7 +250,7 @@ public class InboxActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (messageTxt.getText().toString().matches("")) {
-                    Configs.simpleAlert("You must type something or send a picture!", InboxActivity.this);
+                    Configs.simpleAlert(getResources().getString(R.string.alert_You_must_type_something_or_send_picture), InboxActivity.this);
                 } else {
                     sendMessage();
                 }
@@ -273,19 +273,19 @@ public class InboxActivity extends AppCompatActivity {
                 // Set blockUser  Action title
                 String blockTitle = null;
                 if (hasBlocked.contains(userObj.getObjectId()) ) {
-                    blockTitle = "Unblock User";
+                    blockTitle = getResources().getString(R.string.alert_Unblock_User);
                 } else {
-                    blockTitle = "Block User";
+                    blockTitle = getResources().getString(R.string.alert_block_User);
                 }
 
 
                 AlertDialog.Builder alert = new AlertDialog.Builder(InboxActivity.this);
                 final String finalBlockTitle = blockTitle;
-                alert.setMessage("Select option")
+                alert.setMessage(R.string.alert_Select_option)
                     .setTitle(R.string.app_name)
 
                         // REPORT USER -------------------------------------------------------------
-                        .setPositiveButton("Report User", new DialogInterface.OnClickListener() {
+                        .setPositiveButton(R.string.alert_Report_User, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -313,9 +313,9 @@ public class InboxActivity extends AppCompatActivity {
                                             @Override
                                             public void done(ParseException e) {
                                                 AlertDialog.Builder alert = new AlertDialog.Builder(InboxActivity.this);
-                                                alert.setMessage("You've blocked this User, you will no longer get Chat messages from @" + userObj.getString(Configs.USER_USERNAME))
+                                                alert.setMessage(R.string.alert_You_have_blocked_this_User_you_will_no_longer_get_Chat_messages_from + userObj.getString(Configs.USER_USERNAME))
                                                     .setTitle(R.string.app_name)
-                                                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                    .setPositiveButton(getResources().getString(R.string.btn_OK), new DialogInterface.OnClickListener() {
                                                         @Override
                                                         public void onClick(DialogInterface dialogInterface, int i) {
                                                             finish();
@@ -331,7 +331,7 @@ public class InboxActivity extends AppCompatActivity {
                                         currUser.saveInBackground(new SaveCallback() {
                                             @Override
                                             public void done(ParseException e) {
-                                                Configs.simpleAlert("You've unblocked @" + userObj.getString(Configs.USER_USERNAME), InboxActivity.this);
+                                                Configs.simpleAlert(getResources().getString(R.string.alert_You_ve_unblocked) + userObj.getString(Configs.USER_USERNAME), InboxActivity.this);
                                         }});
                                     }
                         }})
@@ -339,14 +339,14 @@ public class InboxActivity extends AppCompatActivity {
 
 
                         // DELETE CHAT -------------------------------------------------------------
-                        .setNeutralButton("Delete Chat", new DialogInterface.OnClickListener() {
+                        .setNeutralButton(getResources().getString(R.string.alert_Delete_Chat), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
 
                                 AlertDialog.Builder alert = new AlertDialog.Builder(InboxActivity.this);
-                                alert.setMessage("Are you sure you want to delete this Chat? @" + userObj.getString(Configs.USER_USERNAME) + " will not be able to see these messages either.")
+                                alert.setMessage(R.string.alert_Are_you_sure_you_want_to_delete_this_Chat + userObj.getString(Configs.USER_USERNAME) + " will not be able to see these messages either.")
                                         .setTitle(R.string.app_name)
-                                        .setPositiveButton("Delete Chat", new DialogInterface.OnClickListener() {
+                                        .setPositiveButton(getResources().getString(R.string.alert_Delete_Chat), new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -389,7 +389,7 @@ public class InboxActivity extends AppCompatActivity {
 
                                         }})// end alert
 
-                                        .setNegativeButton("Cancel", null)
+                                        .setNegativeButton(getResources().getString(R.string.alert_cancel), null)
                                         .setIcon(R.drawable.logo);
                                 alert.create().show();
                             }})
@@ -591,7 +591,7 @@ public class InboxActivity extends AppCompatActivity {
                                     imgPreview.setLayoutParams(layoutParams);
                                     imgPreview.setImageBitmap(bm[0]);
 
-                                    Toast.makeText(InboxActivity.this, "Tap the picture to close", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(InboxActivity.this, R.string.alert_Tap_the_picture_to_close, Toast.LENGTH_SHORT).show();
                             }});
 
                         }
@@ -655,7 +655,7 @@ public class InboxActivity extends AppCompatActivity {
                                     imgPreview.setLayoutParams(layoutParams);
                                     imgPreview.setImageBitmap(bm[0]);
 
-                                    Toast.makeText(InboxActivity.this, "Tap the picture to close", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(InboxActivity.this, R.string.alert_Tap_the_picture_to_close, Toast.LENGTH_SHORT).show();
                             }});
                         }
                     }
@@ -851,7 +851,7 @@ public class InboxActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent, "Select Image"), GALLERY);
+        startActivityForResult(Intent.createChooser(intent, getResources().getString(R.string.alert_Select_Image)), GALLERY);
     }
 
 

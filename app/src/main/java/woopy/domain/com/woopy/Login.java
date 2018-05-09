@@ -111,7 +111,7 @@ public class Login extends AppCompatActivity {
         loginButt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Configs.showPD("Please wait...", Login.this);
+                Configs.showPD(getResources().getString(R.string.alert_please_wait), Login.this);
 
                 ParseUser.logInInBackground(usernameTxt.getText().toString(), passwordTxt.getText().toString(),
                         new LogInCallback() {
@@ -150,21 +150,21 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 AlertDialog.Builder alert = new AlertDialog.Builder(Login.this);
                 alert.setTitle(R.string.app_name);
-                alert.setMessage("Type the valid email address you've used to register on this app");
+                alert.setMessage(R.string.alert_Type_the_valid_email_address_you_have_used_to_register_on_this_ap);
 
                 // Add an EditTxt
                 final EditText editTxt = new EditText (Login.this);
                 editTxt.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
                 alert.setView(editTxt)
-                        .setNegativeButton("Cancel", null)
-                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        .setNegativeButton(R.string.alert_cancel, null)
+                        .setPositiveButton(R.string.btn_OK, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
 
                                 // Reset password
                                 ParseUser.requestPasswordResetInBackground(editTxt.getText().toString(), new RequestPasswordResetCallback() {
                                     public void done(ParseException error) {
                                         if (error == null) {
-                                            Configs.simpleAlert("We've sent you an email to reset your password!", Login.this);
+                                            Configs.simpleAlert(getResources().getString(R.string.alert_We_have_sent_you_an_email_to_reset_your_password), Login.this);
                                         } else {
                                             Configs.simpleAlert(error.getMessage(), Login.this);
                                         }}});
