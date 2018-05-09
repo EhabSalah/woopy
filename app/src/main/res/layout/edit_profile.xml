@@ -213,6 +213,37 @@
                     android:layout_alignBottom="@+id/textView20"
                     android:layout_alignStart="@+id/epAvatarImg"/>
 
+                <LinearLayout
+                    android:id="@+id/lang"
+                    android:layout_below="@+id/epAboutTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <RadioGroup
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:id="@+id/arabic"
+                            android:text="arabic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <RadioButton
+                            android:id="@+id/english"
+                            android:text="english"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RadioGroup>
+                    <Button
+                        android:onClick="change"
+                        android:text="change lang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"/>
+                </LinearLayout>
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/epAvatarImg"
                     android:src="@drawable/logo"
@@ -220,7 +251,7 @@
                     android:layout_height="80dp"
                     android:layout_below="@+id/epAboutTxt"
                     android:layout_alignStart="@+id/epWebsiteTxt"
-                    android:layout_marginTop="21dp"/>
+                    />
 
                 <TextView
                     android:text="@string/txt_Photo"

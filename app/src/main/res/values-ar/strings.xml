@@ -24,20 +24,20 @@
     <string name="title_activity_image_preview">ImagePreview</string>
 
     <!--       account.xml & class         -->
-    <string name="txt_loading">loading...</string>
-    <string name="btn_browse">Browse</string>
-    <string name="btn_mylikes">My Likes</string>
-    <string name="btn_sell">Sell</string>
+    <string name="txt_loading">جارى التحميل...</string>
+    <string name="btn_browse">تصفح</string>
+    <string name="btn_mylikes">إعجاباتى</string>
+    <string name="btn_sell">شراء</string>
     <string name="btn_activity">Activity</string>
-    <string name="btn_account">Account</string>
-    <string name="txt_joined">Joined:</string>
-    <string name="txt_verified">Verified:</string>
+    <string name="btn_account">حساب</string>
+    <string name="txt_joined">منضم:</string>
+    <string name="txt_verified">مؤكد:</string>
     <string name="btn_feedbacks">Feedbacks</string>
-    <string name="btn_edit_profile">Edit profile</string>
-    <string name="btn_logout">Logout</string>
-    <string name="txt_my_ads">MY ADS</string>
+    <string name="btn_edit_profile">تعديل الصفحة الشخصية</string>
+    <string name="btn_logout">تسجيل الخروج</string>
+    <string name="txt_my_ads">إعلاناتى</string>
     <string name="alert_logout">Are you sure you want to logout?</string>
-    <string name="alert_confirm_logout">OK</string>
+    <string name="alert_confirm_logout">موافق</string>
     <string name="alert_loging_out">Logging out...</string>
     <string name="alert_cancel">Cancel</string>
     <string name="txt_joined_since">Joined: </string>

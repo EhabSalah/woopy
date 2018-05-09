@@ -14,6 +14,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -37,6 +38,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.parse.GetDataCallback;
@@ -50,12 +52,18 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Locale;
 
 public class EditProfile extends AppCompatActivity {
 
     /* Views */
     EditText usernameTxt, fullnameTxt, websiteTxt, aboutTxt;
     ImageView avatarImg;
+
+    RadioButton arabic,english;
+    private String mOld,language;
+    private static Locale myLocale;
+
     MarshMallowPermission mmp = new MarshMallowPermission(this);
     Context ctx = EditProfile.this;
 
@@ -70,6 +78,7 @@ public class EditProfile extends AppCompatActivity {
         // Hide ActionBar
         getSupportActionBar().hide();
 
+        mOld = getCurrentLanguage();
 
 
         // Init views
@@ -83,6 +92,9 @@ public class EditProfile extends AppCompatActivity {
         aboutTxt.setTypeface(Configs.titRegular);
         avatarImg = findViewById(R.id.epAvatarImg);
 
+
+        arabic = findViewById(R.id.arabic);
+        english = findViewById(R.id.english);
 
 
         // Call query
@@ -233,6 +245,50 @@ public class EditProfile extends AppCompatActivity {
     }// end onCreate()
 
 
+
+    public void change (View view){
+        if (arabic.isChecked()){
+            language = "ar";
+            changeLang(language);
+        }else if (english.isChecked()){
+            language = "en";
+            changeLang(language);
+        }
+    }
+    public void changeLang(String lang) {
+        if (lang.equalsIgnoreCase(""))
+            return;
+        myLocale = new Locale(lang);
+        Locale.setDefault(myLocale);
+        android.content.res.Configuration config = new android.content.res.Configuration();
+        config.locale = myLocale;
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+        saveLocale(lang);
+        if (!mOld.equals(lang)) {
+            Intent frsh=new Intent(this,EditProfile.class);
+            startActivity(frsh);
+            finish();
+        }else {
+            Intent frsh=new Intent(this,EditProfile.class);
+            startActivity(frsh);
+            finish();
+        }
+    }
+    public void saveLocale(String lang)
+    {
+        String langPref = "App_Language";
+        SharedPreferences prefs = getSharedPreferences("CommonPrefs", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(langPref, lang);
+        editor.commit();
+    }
+
+    public String getCurrentLanguage() {
+        String langPref = "App_Language";
+        SharedPreferences prefs = getSharedPreferences("CommonPrefs", Activity.MODE_PRIVATE);
+        String old = prefs.getString(langPref, "ar");
+        return old;
+    }
 
 
 
