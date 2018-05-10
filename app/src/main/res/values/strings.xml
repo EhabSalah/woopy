@@ -271,4 +271,37 @@
     <string name="edt_username">username</string>
     <!--     sendfeedback.xml & class done        -->
 
+    <!--     sign_up.xml & class done        -->
+    <string name="alert_You_must_fill_all_the_fields_to_Sign_Up">You must fill all the fields to Sign Up!</string>
+    <string name="alert_You_must_accept_out_Terms_of_Service_in_order_to_sign_up">You must accept out Terms of Service in order to sign up.</string>
+    <string name="edt_choose_username">choose a username</string>
+    <string name="edt_choose_password">choose a password</string>
+    <string name="edt_type_your_email_address">type your email address</string>
+    <string name="btn_I_agree_to_Terms_Of_Service">I agree to Terms Of Service</string>
+    <string name="btn_Sign_Up">Sign Up</string>
+    <!--     sign_up.xml & class done        -->
+
+    <!--     sort_by.xml & class done        -->
+    <string name="btn_Cancel">Cancel</string>
+    <string name="btn_Sort_By">Sort By</string>
+    <string name="alert_Select_an_option_or_tap_Cancel">Select an option, or tap Cancel!</string>
+    <!--     sort_by.xml & class done        -->
+
+    <!--     terms_of_use.xml & class done        -->
+    <string name="alert_Terms_of_Use">Terms of Use</string>
+    <!--     terms_of_use.xml & class done        -->
+
+    <!--     watch_video.xml & class done        -->
+    <string name="txt_Watch_Video">Watch Video</string>
+    <!--     watch_video.xml & class done        -->
+
+    <!--     wizard.xml & class done        -->
+    <string name="btn_Sign_up_or_Login_in_with_Email">Sign up or Login in with Email </string>
+    <string name="btn_By_signing_up_you_agree_to_our_Terms_of_Service">By signing up you agree to our Terms of Service </string>
+    <string name="alert_Do_you_accept_our_Terms_of_Service">Do you accept our Terms of Service?</string>
+    <string name="alert_Yes">Yes</string>
+    <string name="alert_Read_Terms_of_Service">Read Terms of Service</string>
+    <!--     wizard.xml & class done        -->
+
+
 </resources>

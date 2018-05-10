@@ -142,11 +142,11 @@ public class Wizard extends AppCompatActivity {
             public void onClick(View v) {
 
                 AlertDialog.Builder alert  = new AlertDialog.Builder(Wizard.this);
-                alert.setTitle("Do you accept our Terms of Service?")
+                alert.setTitle(R.string.alert_Do_you_accept_our_Terms_of_Service)
                         .setIcon(R.drawable.logo)
                         .setItems(new CharSequence[] {
-                                        "Yes",
-                                        "Read Terms of Service"
+                                        getResources().getString(R.string.alert_Yes),
+                                        getResources().getString(R.string.alert_Read_Terms_of_Service)
                         }, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 switch (which) {
@@ -155,7 +155,7 @@ public class Wizard extends AppCompatActivity {
                                     // SIGN IN WITH FACEBOOK
                                     case 0:
                                         List<String> permissions = Arrays.asList("public_profile", "email");
-                                        Configs.showPD("Please wait...", Wizard.this);
+                                        Configs.showPD(getResources().getString(R.string.alert_please_wait), Wizard.this);
 
                                         ParseFacebookUtils.logInWithReadPermissionsInBackground(Wizard.this, permissions, new LogInCallback() {
                                             @Override
@@ -182,7 +182,7 @@ public class Wizard extends AppCompatActivity {
                                         break;
 
                         }}})
-                        .setNegativeButton("Cancel", null);
+                        .setNegativeButton(R.string.alert_cancel, null);
                 alert.create().show();
 
 

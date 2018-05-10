@@ -22,7 +22,7 @@
             android:layout_alignParentTop="true" />
 
         <Button
-            android:text="By signing up you agree to our Terms of Service "
+            android:text="@string/btn_By_signing_up_you_agree_to_our_Terms_of_Service"
             android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:id="@+id/tosButt"
@@ -54,7 +54,7 @@
             android:layout_centerHorizontal="true" />
 
         <Button
-            android:text="Sign up or Login in with Email "
+            android:text="@string/btn_Sign_up_or_Login_in_with_Email"
             android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:id="@+id/signupButt"

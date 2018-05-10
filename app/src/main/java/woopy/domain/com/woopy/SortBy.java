@@ -85,7 +85,7 @@ public class SortBy extends AppCompatActivity {
                     Configs.sortBy = selectedSort;
                     finish();
                 } else {
-                    Configs.simpleAlert("Select an option, or tap Cancel!", SortBy.this);
+                    Configs.simpleAlert(getResources().getString(R.string.alert_Select_an_option_or_tap_Cancel), SortBy.this);
         }}});
 
 

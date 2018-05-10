@@ -146,16 +146,16 @@ public class SignUp extends AppCompatActivity {
                     if (usernameTxt.getText().toString().matches("") || passwordTxt.getText().toString().matches("") ||
                             emailTxt.getText().toString().matches("") || fullnameTxt.getText().toString().matches("")) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(SignUp.this);
-                        builder.setMessage("You must fill all the fields to Sign Up!")
+                        builder.setMessage(R.string.alert_You_must_fill_all_the_fields_to_Sign_Up)
                                 .setTitle(R.string.app_name)
-                                .setPositiveButton("OK", null);
+                                .setPositiveButton(R.string.btn_OK, null);
                         AlertDialog dialog = builder.create();
                         dialog.setIcon(R.drawable.logo);
                         dialog.show();
 
 
                     } else {
-                        Configs.showPD("Please wait...", SignUp.this);
+                        Configs.showPD(getResources().getString(R.string.alert_please_wait), SignUp.this);
                         dismisskeyboard();
 
                         ParseUser user = new ParseUser();
@@ -198,7 +198,7 @@ public class SignUp extends AppCompatActivity {
 
                 // USER HAS NOT ACCEPTED THE TERMS OF SERVICE
                 } else {
-                    Configs.simpleAlert("You must accept out Terms of Service in order to sign up.", SignUp.this);
+                    Configs.simpleAlert(getResources().getString(R.string.alert_You_must_accept_out_Terms_of_Service_in_order_to_sign_up), SignUp.this);
                 }
 
         }});
@@ -263,7 +263,7 @@ public class SignUp extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent, "Select Image"), GALLERY);
+        startActivityForResult(Intent.createChooser(intent, getResources().getString(R.string.alert_Select_Image)), GALLERY);
     }
 
 
