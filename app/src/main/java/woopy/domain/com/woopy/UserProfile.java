@@ -112,21 +112,21 @@ public class UserProfile extends AppCompatActivity {
                       // Set blockUser  Action title
                       String blockTitle = null;
                       if (hasBlocked.contains(userObj.getObjectId())) {
-                          blockTitle = "Unblock User";
+                          blockTitle = getResources().getString(R.string.alert_Unblock_User);
                       } else {
-                          blockTitle = "Block User";
+                          blockTitle = getResources().getString(R.string.alert_block_User);
                       }
 
 
                       AlertDialog.Builder alert = new AlertDialog.Builder(UserProfile.this);
                       final String finalBlockTitle = blockTitle;
 
-                      alert.setMessage("Select Option")
+                      alert.setMessage(R.string.alert_select_option)
                               .setTitle(R.string.app_name)
 
 
                               // REPORT USER ------------------------------------------------------------
-                              .setPositiveButton("Report User", new DialogInterface.OnClickListener() {
+                              .setPositiveButton(R.string.alert_Report_User, new DialogInterface.OnClickListener() {
                                   @Override
                                   public void onClick(DialogInterface dialogInterface, int i) {
                                       // Pass objectID to the other Activity
@@ -153,9 +153,9 @@ public class UserProfile extends AppCompatActivity {
                                               @Override
                                               public void done(ParseException e) {
                                                   AlertDialog.Builder alert = new AlertDialog.Builder(UserProfile.this);
-                                                  alert.setMessage("You've blocked this User, you will no longer get Chat messages from @" + userObj.getString(Configs.USER_USERNAME))
+                                                  alert.setMessage(R.string.alert_Youve_blocked_this_User_you_will_no_longer_get_Chat_messages_from+"@" + userObj.getString(Configs.USER_USERNAME))
                                                           .setTitle(R.string.app_name)
-                                                          .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                          .setPositiveButton(R.string.btn_OK, new DialogInterface.OnClickListener() {
                                                               @Override
                                                               public void onClick(DialogInterface dialogInterface, int i) {
                                                                   finish();
@@ -173,7 +173,7 @@ public class UserProfile extends AppCompatActivity {
                                           currUser.saveInBackground(new SaveCallback() {
                                               @Override
                                               public void done(ParseException e) {
-                                                  Configs.simpleAlert("You've unblocked @" + userObj.getString(Configs.USER_USERNAME), UserProfile.this);
+                                                  Configs.simpleAlert(getResources().getString(R.string.alert_Youve_unblocked)+"@" + userObj.getString(Configs.USER_USERNAME), UserProfile.this);
                                               }
                                           });
                                       }
@@ -181,7 +181,7 @@ public class UserProfile extends AppCompatActivity {
                                   }
                               })
 
-                              .setNeutralButton("Cancel", null)
+                              .setNeutralButton(R.string.alert_cancel, null)
                               .setIcon(R.drawable.logo);
                       alert.create().show();
 
@@ -258,7 +258,7 @@ public class UserProfile extends AppCompatActivity {
         TextView aboutTxt = findViewById(R.id.upAboutTxt);
         aboutTxt.setTypeface(Configs.titRegular);
         if (userObj.getString(Configs.USER_ABOUT_ME) != null) { aboutTxt.setText(userObj.getString(Configs.USER_ABOUT_ME));
-        } else { aboutTxt.setText("This user has not provided a Bio yet"); }
+        } else { aboutTxt.setText(getResources().getString(R.string.alert_This_user_has_not_provided_Bio_yet)); }
 
         // Get joined since
         TextView joinedTxt = findViewById(R.id.upJoinedTxt);
@@ -270,9 +270,9 @@ public class UserProfile extends AppCompatActivity {
         verifTxt.setTypeface(Configs.titRegular);
         if (userObj.get(Configs.USER_EMAIL_VERIFIED) != null) {
             if (userObj.getBoolean(Configs.USER_EMAIL_VERIFIED)) {
-                verifTxt.setText("Verified: Yes");
-            } else { verifTxt.setText("Verified: No"); }
-        } else { verifTxt.setText("Verified: No"); }
+                verifTxt.setText(R.string.alert_verified_yes);
+            } else { verifTxt.setText(R.string.alert_verified_no); }
+        } else { verifTxt.setText(R.string.alert_verified_no); }
 
         // Get avatar
         final ImageView avImg = findViewById(R.id.upAvatarImg);
@@ -290,7 +290,7 @@ public class UserProfile extends AppCompatActivity {
 
     // MARK: - QUERY MY ADS ------------------------------------------------------------------
     void queryUserAds() {
-        Configs.showPD("Loading ads...", UserProfile.this);
+        Configs.showPD(getResources().getString(R.string.alert_Loading_ads), UserProfile.this);
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery(Configs.ADS_CLASS_NAME);
         query.whereEqualTo(Configs.ADS_SELLER_POINTER, userObj);

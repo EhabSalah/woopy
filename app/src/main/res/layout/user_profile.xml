@@ -31,7 +31,7 @@
             android:layout_marginRight="10dp"/>
 
         <TextView
-            android:text="loading..."
+            android:text="@string/txt_loading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -72,7 +72,7 @@
 
 
     <TextView
-        android:text="loading..."
+        android:text="@string/txt_loading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/upAvatarImg"
@@ -85,7 +85,7 @@
         android:maxLines="1"/>
 
     <TextView
-        android:text="Joined:"
+        android:text="@string/txt_joined"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/upFullNameTxt"
@@ -95,7 +95,7 @@
         android:layout_marginTop="5dp"/>
 
     <TextView
-        android:text="Verified:"
+        android:text="@string/txt_verified"
         android:textSize="11sp"
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
@@ -137,7 +137,7 @@
         android:background="@android:color/transparent"
         android:gravity="center_vertical"
         android:paddingBottom="5dp"
-        android:text="Check Feedbacks"
+        android:text="@string/txt_Check_Feedbacks"
         android:textAllCaps="false"
         android:textColor="@color/main_color"
         android:textSize="12sp"
@@ -153,11 +153,11 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="30dp"
         android:maxLines="4"
-        android:text="loading.."
+        android:text="@string/txt_loading"
         android:textSize="10sp"/>
 
     <TextView
-        android:text="ADS POSTED"
+        android:text="@string/txt_ADS_POSTED"
         android:textSize="12sp"
         android:textAlignment="center"
         android:layout_width="wrap_content"
@@ -176,7 +176,7 @@
         android:layout_height="30dp"
         android:background="@android:color/transparent"
         android:fontFamily="sans-serif"
-        android:text="loading..."
+        android:text="@string/txt_loading"
         android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textColor="#777"

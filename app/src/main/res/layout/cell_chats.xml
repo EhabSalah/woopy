@@ -17,7 +17,7 @@
         android:layout_marginTop="10dp"/>
 
     <TextView
-        android:text="loading..."
+        android:text="@string/txt_loading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/cchatsAdImg"
@@ -30,7 +30,7 @@
         android:layout_marginTop="15dp"/>
 
     <TextView
-        android:text="loading..."
+        android:text="@string/txt_loading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cchatsAdTitleTxt"
@@ -40,7 +40,7 @@
         android:layout_marginTop="5dp"/>
 
     <TextView
-        android:text="loading..."
+        android:text="@string/txt_loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/cchatsAdImg"
@@ -50,7 +50,7 @@
         android:textSize="11sp"/>
 
     <TextView
-        android:text="loading..."
+        android:text="@string/txt_loading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cchatsSenderTxt"

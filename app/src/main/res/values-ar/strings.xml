@@ -21,7 +21,7 @@
     <string name="page1">page 1</string>
     <string name="page2">page 2</string>
     <string name="page3">Page 3</string>
-    <string name="title_activity_image_preview">ImagePreview</string>
+    <string name="title_activity_image_preview">عرض الصورة</string>
 
     <!--       account.xml & class         -->
     <string name="txt_loading">جارى التحميل...</string>
@@ -32,243 +32,298 @@
     <string name="btn_account">حساب</string>
     <string name="txt_joined">منضم:</string>
     <string name="txt_verified">مؤكد:</string>
-    <string name="btn_feedbacks">Feedbacks</string>
+    <string name="btn_feedbacks">التغذية الراجعة</string>
     <string name="btn_edit_profile">تعديل الصفحة الشخصية</string>
     <string name="btn_logout">تسجيل الخروج</string>
     <string name="txt_my_ads">إعلاناتى</string>
-    <string name="alert_logout">Are you sure you want to logout?</string>
+    <string name="alert_logout">هل انت متأكد من أنك تريد تسجيل الخروج؟</string>
     <string name="alert_confirm_logout">موافق</string>
-    <string name="alert_loging_out">Logging out...</string>
-    <string name="alert_cancel">Cancel</string>
-    <string name="txt_joined_since">Joined: </string>
-    <string name="alert_verified_yes">Verified: Yes</string>
-    <string name="alert_verified_no">Verified: No</string>
-    <string name="alert_please_wait">Please wait...</string>
+    <string name="alert_loging_out">جارى تسجيل الخروج...</string>
+    <string name="alert_cancel">الغاء</string>
+    <string name="txt_joined_since">منضم: </string>
+    <string name="alert_verified_yes">تأكيد: نعم</string>
+    <string name="alert_verified_no">تأكيد: لا</string>
+    <string name="alert_please_wait">الرجاء الانتظار</string>
     <!--     account.xml & class done        -->
 
     <!--       activity_screen.xml & class         -->
-    <string name="txt_long_press_to_delete">Long press to delete</string>
+    <string name="txt_long_press_to_delete">اضغط باستمرار للحذف</string>
     <string name="toast_activity_removed">Activity removed!</string>
     <!--     activity_screen.xml & class done        -->
 
     <!--       ad_details.xml & class         -->
-    <string name="txt_ad_details">Ad details</string>
+    <string name="txt_ad_details">تفاصيل الاعلان</string>
     <string name="btn_dots">•••</string>
-    <string name="txt_like">Like</string>
-    <string name="btn_chat_with_seller">Chat with Seller</string>
-    <string name="txt_price">Price: </string>
-    <string name="txt_condition">Condition: </string>
-    <string name="txt_category">Category: </string>
-    <string name="txt_location">Location: </string>
-    <string name="btn_video">Video:</string>
-    <string name="txt_seller">Seller</string>
-    <string name="txt_user_name">username </string>
-    <string name="btn_Post_read_comments">Post/Read comments</string>
-    <string name="btn_send_feedback">Send Feedback</string>
-    <string name="alert_select_option">Select option</string>
-    <string name="alert_report_ad">Report Ad</string>
-    <string name="alert_share">Share</string>
-    <string name="alert_share_on">Share on...</string>
-    <string name="toast_sorry">Sorry</string>
-    <string name="toast_has_blocked_you_you_cant_chat_with_this_user">has blocked you, you can not chat with this user.</string>
-    <string name="toast_you_must_be_logged_in_to_chat_want_to_login_now">You must be logged in to chat. Want to login now?</string>
-    <string name="toast_You_must_be_logged_in_to_like_this_ad_want_to_login_now">You must be logged in to like this Ad. Want to login now?</string>
-    <string name="toast_liked_your_ad"> liked your Ad: </string>
+    <string name="txt_like">اعجاب</string>
+    <string name="btn_chat_with_seller">محادثة مع البائع</string>
+    <string name="txt_price">السعر: </string>
+    <string name="txt_condition">الشروط: </string>
+    <string name="txt_category">الصنف: </string>
+    <string name="txt_location">الموقع: </string>
+    <string name="btn_video">فيديو: </string>
+    <string name="txt_seller">بائع</string>
+    <string name="txt_user_name">اسم المستخدم</string>
+    <string name="btn_Post_read_comments">اكتب موضوع/قراءة التعليقات</string>
+    <string name="btn_send_feedback">ارسال رأيك</string>
+    <string name="alert_select_option">إختيار صنف</string>
+    <string name="alert_report_ad">التبليغ عن إعلان</string>
+    <string name="alert_share">مشاركة</string>
+    <string name="alert_share_on">شارك على...</string>
+    <string name="toast_sorry">اسف</string>
+    <string name="toast_has_blocked_you_you_cant_chat_with_this_user">قد قام بحظرك , لا تستطيع المحاثة معه</string>
+    <string name="toast_you_must_be_logged_in_to_chat_want_to_login_now">يجب عليك تسجيل الدخول اولا, هل تريد تسجيل الدخول؟</string>
+    <string name="toast_You_must_be_logged_in_to_like_this_ad_want_to_login_now">يجب عليك تسجيل الدخول اولا لابداء الاعجاب بهذا الاعلان, هل تريد تسجيل الدخول؟</string>
+    <string name="toast_liked_your_ad"> اعجب بإعلانك </string>
     <string name="toast_geocoder_not_present">Geocoder not present!</string>
-    <string name="toast_watch_video">"Video: Watch video"</string>
-    <string name="toast_Video">Video: N/A</string>
-    <string name="toast_you_must_be_logged_in_to_comment_want_to_login_now">You must be logged in to comment. Want to Login now?</string>
-    <string name="toast_you_must_be_logged_in_to_send_a_feedback_want_to_login_now">You must be logged in to send a feedback. Want to login now?</string>
+    <string name="toast_watch_video">فيديو: مشاهدة الفيديو</string>
+    <string name="toast_Video">فيديو: N/A</string>
+    <string name="toast_you_must_be_logged_in_to_comment_want_to_login_now">يجب عليك تسجيل الدخول اولا لتتمكن من التعليق, هل تريد تسجيل الدخول؟</string>
+    <string name="toast_you_must_be_logged_in_to_send_a_feedback_want_to_login_now">يجب عليك تسجيل الدخول اولا لترسل رأيك, هل تريد تسجيل الدخول؟</string>
     <!--     ad_details.xml & class done        -->
 
     <!--       ad_list.xml & class         -->
-    <string name="edt_search_on_woopy">Search on woopy...</string>
-    <string name="txt_your_search_did_not_match_any_listings_try_another_search">Your search did not match any listings. Try another search?</string>
-    <string name="txt_sort_by">SORT BY</string>
-    <string name="btn_recent">Recent</string>
-    <string name="btn_all">All</string>
-    <string name="txt_CATEGORY">CATEGORY</string>
-    <string name="btn_NewYorkUSA">New York, USA</string>
-    <string name="alert_you_must_type_somehting">You must type somehting!</string>
-    <string name="toast_You_must_be_loggen_in_to_see_your_Chats_want_to_login_now">You must be loggen in to see your Chats. Want to login now?</string>
-    <string name="toast_Failed_to_get_your_Location">Failed to get your Location.</string>
-    <string name="toast_Go_into_Settings_and_make_sure_Location_Service_is_enabled">Go into Settings and make sure Location Service is enabled!</string>
-    <string name="alert_Mi_FROM"> Mi FROM</string>
-    <string name="toast_You_must_be_logged_in_to_see_and_post_comments_Want_to_login_now">You must be logged in to see and post comments. Want to login now?</string>
-    <string name="alert_Report_Ad">Report Ad</string>
-    <string name="toast_You_must_be_logged_in_to_like_this_Ad_Want_to_login_now">You must be logged in to like this Ad. Want to login now?</string>
+    <string name="edt_search_on_woopy">البحث فى وووبى...</string>
+    <string name="txt_your_search_did_not_match_any_listings_try_another_search">كلمة بحثك لا تتوافق مع اى نتائج برجاء اختيار كلمة اخرى</string>
+    <string name="txt_sort_by">ترتيب جسب</string>
+    <string name="btn_recent">حالى</string>
+    <string name="btn_all">الكل</string>
+    <string name="txt_CATEGORY">صنف</string>
+    <string name="btn_NewYorkUSA">نيويورك امريكا</string>
+    <string name="alert_you_must_type_somehting">يجب عليك كتابة اى شئ</string>
+    <string name="toast_You_must_be_loggen_in_to_see_your_Chats_want_to_login_now">يجب عليك تسجيل الدخول اولا لتتمكن من رؤية محادثاتك, هل تريد تسجيل الدخول؟</string>
+    <string name="toast_Failed_to_get_your_Location">لم نتمكن من تحديد موقعك</string>
+    <string name="toast_Go_into_Settings_and_make_sure_Location_Service_is_enabled">اذهب الى الاعدادات وتأكد من ان خاصية الموقع مفعلة!</string>
+    <string name="alert_Mi_FROM">انا من </string>
+    <string name="toast_You_must_be_logged_in_to_see_and_post_comments_Want_to_login_now">يجب عليك تسجيل الدخول اولا لتتمكن من رؤية وكتابة التعليقات, هل تريد تسجيل الدخول؟</string>
+    <string name="alert_Report_Ad">الابلاغ عن اعلان</string>
+    <string name="toast_You_must_be_logged_in_to_like_this_Ad_Want_to_login_now">يجب عليك تسجيل الدخول اولا لتبدى اعجابك بهذا الاعلان, هل تريد تسجيل الدخول؟</string>
     <!--     ad_list.xml & class done        -->
 
     <!--       category.xml & class         -->
-    <string name="btn_Done">Done</string>
-    <string name="txt_Choose_category">Choose category</string>
-    <string name="alert_Select_a_Category_or_tap_Cancel">Select a Category, or tap Cancel!</string>
+    <string name="btn_Done">تم</string>
+    <string name="txt_Choose_category">إختر صنف</string>
+    <string name="alert_Select_a_Category_or_tap_Cancel">إختر صنف او اضغط الغاء</string>
     <!--     category.xml & class done        -->
 
     <!--       chats.xml & class         -->
-    <string name="txt_Chats">Chats</string>
+    <string name="txt_Chats">المحادثات</string>
     <!--     chats.xml & class done        -->
 
     <!--       comments.xml & class         -->
-    <string name="alert_commented_your_Ad">commented your Ad: </string>
-    <string name="txt_Comments">Comments</string>
-    <string name="btn_Send">Send </string>
-    <string name="edt_Type_here">Type here...</string>
+    <string name="alert_commented_your_Ad">علق على اعلانك</string>
+    <string name="txt_Comments">التعليقات</string>
+    <string name="btn_Send">إرسال</string>
+    <string name="edt_Type_here">اكتب هنا...</string>
     <!--     comments.xml & class done        -->
 
     <!--     config.xml & class done        -->
-    <string name="btn_OK">OK</string>
-    <string name="btn_login">Login</string>
+    <string name="btn_OK">موافق</string>
+    <string name="btn_login">تسجيل دخول</string>
     <!--     config.xml & class done        -->
 
     <!--     distance_map.xml & class done        -->
-    <string name="txt_Set_distance">Set distance</string>
-    <string name="txt_50_miles_around_your_location">50 miles around your location</string>
-    <string name="edt_Type_a_location_and_hit_search">Type a location and hit search </string>
-    <string name="toast_miles_around_your_location"> miles around your location</string>
+    <string name="txt_Set_distance">ضع المسافة</string>
+    <string name="txt_50_miles_around_your_location">50 ميل حول موقعك</string>
+    <string name="edt_Type_a_location_and_hit_search">اكتب موقع ثم اضغط على البحث</string>
+    <string name="toast_miles_around_your_location">ميل حول موقعك</string>
     <!--     distance_map.xml & class done        -->
 
     <!--     edit_profile.xml & class done        -->
-    <string name="alert_Pick_from_Gallery">Pick from Gallery</string>
-    <string name="alert_Take_Picture">Take a Picture</string>
+    <string name="alert_Pick_from_Gallery">اختر من الذاكرة</string>
+    <string name="alert_Take_Picture">خذ صورة</string>
     <string name="alert_Select_source">Select source</string>
-    <string name="alert_You_must_insert_at_least_a_username_and_your_full_name">You must insert at least a username and your full name!</string>
-    <string name="alert_Your_Profile_has_been_updated">Your Profile has been updated!</string>
-    <string name="alert_Type_the_valid_email_address_you_have_used_to_register_on_this_app">Type the valid email address you have used to register on this app</string>
-    <string name="alert_Reset_Password">Reset Password</string>
-    <string name="alert_We_ve_sent_you_an_email_to_reset_your_password">We have sent you an email to reset your password!</string>
-    <string name="alert_Select_Image">Select Image</string>
-    <string name="txt_Edit_Profile">Edit Profile</string>
-    <string name="btn_Save">Save</string>
-    <string name="edt_type_username">type a username</string>
-    <string name="txt_Username">Username: </string>
-    <string name="txt_Full_Name">Full Name: </string>
-    <string name="edt_type_your_full_name">type your full name</string>
-    <string name="txt_Website">Website: </string>
+    <string name="alert_You_must_insert_at_least_a_username_and_your_full_name">يجب عليك إدخال اسم المستخدم و اسمك بالكامل على الاقل!</string>
+    <string name="alert_Your_Profile_has_been_updated">تم إزالة صفحتك الشخصية</string>
+    <string name="alert_Type_the_valid_email_address_you_have_used_to_register_on_this_app">اكتب بريدك الالكترونى الصحيح الذى قمت بتسجيل دخولك منه سابقا</string>
+    <string name="alert_Reset_Password">تعيين كلمة مرور</string>
+    <string name="alert_We_ve_sent_you_an_email_to_reset_your_password">لقد قمنا بارسال بريد الكترونى لتغيير كلمة السر</string>
+    <string name="alert_Select_Image">إختر صورة</string>
+    <string name="txt_Edit_Profile">تعديل الصفحة الشخصية</string>
+    <string name="btn_Save">حفظ</string>
+    <string name="edt_type_username">اكتب اسم المستخدم</string>
+    <string name="txt_Username">اسم المستخدم: </string>
+    <string name="txt_Full_Name">الاسم بالكامل: </string>
+    <string name="edt_type_your_full_name">اكتب اسمك بالكامل</string>
+    <string name="txt_Website">موقع الانترنت</string>
     <string name="edt_ex_http_mywebsite_com">ex: http://mywebsite.com</string>
-    <string name="txt_About_me">About me: </string>
-    <string name="edt_type_something_about_you">type something about you</string>
-    <string name="txt_Photo">Photo: </string>
-    <string name="txt_Tap_to_change_photo">Tap to change photo</string>
-    <string name="btn_Reset_Password">Reset Password</string>
-    <string name="btn_Read_Terms_of_Service">Read Terms of Service</string>
+    <string name="txt_About_me">نبذة عنى</string>
+    <string name="edt_type_something_about_you">اكتب شئ ما عنك</string>
+    <string name="txt_Photo">صورة: </string>
+    <string name="txt_Tap_to_change_photo">اضغط لتغيير الصورة</string>
+    <string name="btn_Reset_Password">تعيين كلمة سر </string>
+    <string name="btn_Read_Terms_of_Service">قراءة شروط الخدمة</string>
     <!--     edit_profile.xml & class done        -->
 
     <!--     feedbacks.xml & class done        -->
-    <string name="txt_Feedbacks">Feedbacks</string>
+    <string name="txt_Feedbacks">التغذية الراجعة</string>
     <!--     feedbacks.xml & class done        -->
 
     <!--     full_screen_preview.xml & class done        -->
-    <string name="txt_PINCH_TO_ZOOM_TAP_TO_CLOSE">PINCH TO ZOOM | TAP TO CLOSE</string>
+    <string name="txt_PINCH_TO_ZOOM_TAP_TO_CLOSE">اسحب للتكبير ,اضغط للغلق</string>
     <!--     full_screen_preview.xml & class done        -->
 
     <!--     home.xml & class done        -->
-    <string name="alert_You_must_be_logged_in_to_see_your_Chats_Want_to_login_now">You must be logged in to see your Chats. Want to login now?</string>
-    <string name="edt_Search_on_woopy">Search on woopy...</string>
+    <string name="alert_You_must_be_logged_in_to_see_your_Chats_Want_to_login_now">يجب عليك تسجيل الدخول اولا لتتمكن من رؤية محادثاتك, هل تريد تسجيل الدخول؟</string>
+    <string name="edt_Search_on_woopy">البحث فى وووبى...</string>
     <!--     home.xml & class done        -->
 
     <!--     inbox_activity.xml & class done        -->
-    <string name="alert_You_must_type_something_or_send_picture">You must type something or send a picture!</string>
-    <string name="alert_Unblock_User">Unblock User</string>
-    <string name="alert_block_User">Block User</string>
+    <string name="alert_You_must_type_something_or_send_picture">يجب كتابة شئ ما او ارسال صورة</string>
+    <string name="alert_Unblock_User">الغاء الحظر</string>
+    <string name="alert_block_User">حظر</string>
     <string name="alert_Select_option">Select option</string>
-    <string name="alert_Report_User">Report User</string>
-    <string name="alert_You_have_blocked_this_User_you_will_no_longer_get_Chat_messages_from">You have blocked this User, you will no longer get Chat messages from @</string>
-    <string name="alert_You_ve_unblocked">You have unblocked @</string>
-    <string name="alert_Delete_Chat">Delete Chat</string>
-    <string name="alert_Are_you_sure_you_want_to_delete_this_Chat">Are you sure you want to delete this Chat? @</string>
-    <string name="alert_Tap_the_picture_to_close">Tap the picture to close</string>
-    <string name="txt_username">username</string>
-    <string name="txt_type_your_message">type your message</string>
+    <string name="alert_Report_User">الابلاغ عن مستخدم</string>
+    <string name="alert_You_have_blocked_this_User_you_will_no_longer_get_Chat_messages_from">لقد قمت بحظر هذا المستخدم ولن تستطيع استقبال رسائل من @</string>
+    <string name="alert_You_ve_unblocked">لقد قمت بالغاء حظر @</string>
+    <string name="alert_Delete_Chat">حذف المحاثة</string>
+    <string name="alert_Are_you_sure_you_want_to_delete_this_Chat">هل انت متأكد من أنك تريد حذف هذة المحادثة؟ @</string>
+    <string name="alert_Tap_the_picture_to_close">اضغط على الصورة للاغلاق</string>
+    <string name="txt_username">اسم المستخد</string>
+    <string name="txt_type_your_message">اترك رسالتك</string>
     <!--     inbox_activity.xml & class done        -->
 
     <!--     login.xml & class done        -->
-    <string name="alert_Type_the_valid_email_address_you_have_used_to_register_on_this_ap">Type the valid email address you have used to register on this app</string>
-    <string name="alert_We_have_sent_you_an_email_to_reset_your_password">We have sent you an email to reset your password!</string>
-    <string name="txt_woopy">woopy</string>
-    <string name="txt_password">password</string>
-    <string name="txt_Login">Login</string>
-    <string name="txt_Sign_up_with_Email">Sign up with Email </string>
-    <string name="txt_Forgot_password">Forgot password?</string>
+    <string name="alert_Type_the_valid_email_address_you_have_used_to_register_on_this_ap">اكتب بريدك الالكترونى الصحيح الذى قمت بتسجيل دخولك منه سابقا</string>
+    <string name="alert_We_have_sent_you_an_email_to_reset_your_password">لقد قمنا بارسال بريد الكترونى لتغيير كلمة السر</string>
+    <string name="txt_woopy">وووبى</string>
+    <string name="txt_password">الرقم السرى</string>
+    <string name="txt_Login">تسجيل دخول</string>
+    <string name="txt_Sign_up_with_Email">تسجيل دخول عن طريق البريد الالكترونى</string>
+    <string name="txt_Forgot_password">نسيت كلمة السر؟</string>
     <!--     login.xml & class done        -->
 
     <!--     map_screen.xml & class done        -->
-    <string name="toast_You_must_move_the_Map_and_to_choose_Location_or_just_close_this_Map_screen">You must move the Map and to choose a Location, or just close this Map screen</string>
-    <string name="txt_Move_and_zoom_to_set_location">Move and zoom to set location</string>
+    <string name="toast_You_must_move_the_Map_and_to_choose_Location_or_just_close_this_Map_screen">يجب عليك تحريك الخريطة واختيار مكان او اغلق صفحة الخريطة</string>
+    <string name="txt_Move_and_zoom_to_set_location">تحرك وكبر لضبط موقعك</string>
     <!--     map_screen.xml & class done        -->
 
     <!--     permissions.xml & class done        -->
-    <string name="alert_LocationpermissionisneededtosearchAdsnearbyyourlocationPleaseenableLocationinAppSettingotherwiseyoullgetAdsonlyfromNewYorkCity">Location permission is needed to search Ads nearby your location. Please enable Location in App Settings, otherwise you will get Ads only from New York City.</string>
-    <string name="toast_Microphone_permission_needed_for_recording_Please_allow_in_App_Settings_for_additional_functionality">Microphone permission needed for recording. Please allow in App Settings for additional functionality.</string>
-    <string name="toast_External_Storage_permission_needed_Please_allow_in_App_Settings_for_additional_functionality">External Storage permission needed. Please allow in App Settings for additional functionality.</string>
-    <string name="toast_External_Storage_permission_needed_Please_allow_in_App_Settings_for_additional_functionalit">External Storage permission needed. Please allow in App Settings for additional functionality.</string>
-    <string name="toast_Camera_permission_needed_Please_allow_in_App_Settings_foradditional_functionality">Camera permission needed. Please allow in App Settings for additional functionality.</string>
+    <string name="alert_LocationpermissionisneededtosearchAdsnearbyyourlocationPleaseenableLocationinAppSettingotherwiseyoullgetAdsonlyfromNewYorkCity">خدمة الوصول للموقع مطلوبة لعرض الاعلانات التى بالقرب منك برجاء الذهاب الى الاعدادات وتفعيلها</string>
+    <string name="toast_Microphone_permission_needed_for_recording_Please_allow_in_App_Settings_for_additional_functionality">سماحية الميكروفون مطلوبة لتسجيل مقطع صوتى برجاء الذهاب الى الاعدادت وتفعيلها حتى تحصل على كل الامتيازات فى هذا التطبيق</string>
+    <string name="toast_External_Storage_permission_needed_Please_allow_in_App_Settings_for_additional_functionality">سماحية الوصول للذاكرة الخارجية مطلوبة برجاء الذهاب الى الاعدادت وتفعيلها حتى تحصل على كل الامتيازات فى هذا التطبيق</string>
+    <string name="toast_External_Storage_permission_needed_Please_allow_in_App_Settings_for_additional_functionalit">سماحية الوصول للذاكرة الخارجية مطلوبة برجاء الذهاب الى الاعدادت وتفعيلها حتى تحصل على كل الامتيازات فى هذا التطبيق</string>
+    <string name="toast_Camera_permission_needed_Please_allow_in_App_Settings_foradditional_functionality">سماحية الوصول للكاميرا مطلوبة برجاء الذهاب الى الاعدادت وتفعيلها حتى تحصل على كل الامتيازات فى هذا التطبيق</string>
+    <string name="alert_location_permission">خدمة الوصول للموقع مطلوبة لعرض الاعلانات التى بالقرب منك برجاء الذهاب الى الاعدادات وتفعيلها</string>
     <!--     permissions.xml & class done        -->
 
     <!--     my_likes.xml & class done        -->
-    <string name="alert_Removing_liked_ad">Removing liked ad...</string>
-    <string name="txt_Listings_you_liked_will_be_displayed_here">Listings you liked will be displayed here.</string>
+    <string name="alert_Removing_liked_ad">حذف الاعلان المفضل</string>
+    <string name="txt_Listings_you_liked_will_be_displayed_here">الاشياء التى ستعجبك ستعرض هنا</string>
     <!--     my_likes.xml & class done        -->
 
     <!--     reportAdOrUser.xml & class done        -->
-    <string name="alert_Are_you_sure_you_want_to_report_this">Are you sure you want to report this </string>
-    <string name="alert_for_the_following_reason"> for the following reason:</string>
-    <string name="alert_Yes_Im_sure">Yes, I am sure</string>
-    <string name="alert_Thanks_for_reporting_this_Ad_We_will_review_it_within_24h">Thanks for reporting this Ad. We will review it within 24h</string>
-    <string name="alert_Thanks_for_reporting_this_User_we_ll_check_it_out_within_24hours">Thanks for reporting this User, we will check it out within 24 hours!</string>
-    <string name="alert_No">No</string>
-    <string name="txt_Report">Report</string>
+    <string name="alert_Are_you_sure_you_want_to_report_this">هل انت متأكد من أنك تريد الابلاغ عن هذا </string>
+    <string name="alert_for_the_following_reason"> للاسباب التالية :</string>
+    <string name="alert_Yes_Im_sure">نعم , انا متأكد</string>
+    <string name="alert_Thanks_for_reporting_this_Ad_We_will_review_it_within_24h">شكرا للابلاغ عن هذا المحتوى سنقوم بالمراجعة فى خلال 24 ساعة</string>
+    <string name="alert_Thanks_for_reporting_this_User_we_ll_check_it_out_within_24hours">شكرا للابلاغ عن هذا المستحدم سنقوم بالمراجعة فى خلال 24 ساعة</string>
+    <string name="alert_No">لا</string>
+    <string name="txt_Report">إبلاغ</string>
     <string name="txt_SELECT_AN_OPTION">SELECT AN OPTION</string>
     <!--     reportAdOrUser.xml & class done        -->
 
     <!--     sell_edit_item.xml & class done        -->
-    <string name="alert_Edit_item">Edit item</string>
-    <string name="alert_Sell_an_item">Sell an item</string>
-    <string name="alert_Take_Video">Take a Video</string>
-    <string name="alert_You_must_make_sure_youve_inserted_the_following_details">You must make sure you have inserted the following details:</string>
-    <string name="alert_Category">-Category</string>
-    <string name="alert_Ad_Title">-Ad Title</string>
-    <string name="alert_Condition_of_the_item">-Condition of the item</string>
-    <string name="alert_A_description">-A description</string>
-    <string name="alert_First_image">-First image</string>
-    <string name="alert_Submitting_ad">Submitting ad...</string>
-    <string name="alert_Your_Ad_has_been_successfully_posted">Your Ad has been successfully posted!</string>
-    <string name="alert_Are_you_sure_you_want_to_delete_this_item">Are you sure you want to delete this item?</string>
-    <string name="alert_Delete_Item">Delete Item</string>
-    <string name="alert_Your_Item_has_been_deleted">Your Item has been deleted!</string>
-    <string name="alert_Select_Video">Select Video</string>
-    <string name="alert_Your_video_is_longer_than">Your video is longer than </string>
-    <string name="alert_seconds_Please_choose_or_take_a_shorter_video">seconds. Please choose or take a shorter video</string>
-    <string name="alert_Failed_to_get_your_Location">Failed to get your Location.</string>
-    <string name="alert_Go_into">Go into Settings and make sure Location Service is enabled, otherwise your Ad will be posted in New York City as default location</string>
-    <string name="btn_Submit">Submit</string>
-    <string name="txt_Add_images_1st_one_equired">Add images (1st one required)</string>
-    <string name="txt_Video">Video</string>
-    <string name="txt_DETAILS">DETAILS</string>
-    <string name="txt_Category">Category:</string>
-    <string name="btn_Choose_one">Choose one...</string>
-    <string name="txt_Title_of_the_item_youre_selling">Title of the item you are selling</string>
-    <string name="txt_Price">Price:</string>
-    <string name="txt_Condition">Condition:</string>
-    <string name="txt_Title">Title:</string>
-    <string name="txt_New">New</string>
-    <string name="txt_Used">Used</string>
-    <string name="txt_Description">Description:</string>
-    <string name="txt_Set_priceforyouritem">Set a price for your item</string>
-    <string name="txt_Type_description_of_your_item">Type a description of your item</string>
-    <string name="btn_Delete_Item">Delete Item</string>
-    <string name="txt_Choose_location_optional">Choose location (optional)*</string>
-    <string name="txt_default">* if you do not choose a location, your current one will be set by default </string>
+    <string name="alert_Edit_item">تعديل المنتج</string>
+    <string name="alert_Sell_an_item">بيع منتج</string>
+    <string name="alert_Take_Video">تسجيل فيديو</string>
+    <string name="alert_You_must_make_sure_youve_inserted_the_following_details">يجب ان تتأكد من انك قمت بادخال جميع التفاصيل</string>
+    <string name="alert_Category">-صنف</string>
+    <string name="alert_Ad_Title">-عنوان الاعلان</string>
+    <string name="alert_Condition_of_the_item">-شروط النموذج</string>
+    <string name="alert_A_description">-الوصف</string>
+    <string name="alert_First_image">-الصورة الاولى</string>
+    <string name="alert_Submitting_ad">إرسال الاعلان...</string>
+    <string name="alert_Your_Ad_has_been_successfully_posted">تم إضافة إعلانك بنجاح</string>
+    <string name="alert_Are_you_sure_you_want_to_delete_this_item">هل انت متأكد من أنك تريد حذف هذا المنتج</string>
+    <string name="alert_Delete_Item">حذف منتج</string>
+    <string name="alert_Your_Item_has_been_deleted">تم حذف منتجك</string>
+    <string name="alert_Select_Video">إختر فيديو</string>
+    <string name="alert_Your_video_is_longer_than">هذا الفيديو اكبر من </string>
+    <string name="alert_seconds_Please_choose_or_take_a_shorter_video">ثانية برجاء اختيار او تسجيل اقل من ذلك</string>
+    <string name="alert_Failed_to_get_your_Location">لم نتمكن من تحديد موقعك</string>
+    <string name="alert_Go_into">اذهب الى الاعدادات وتأكد من ان خاصية الموقع مفعلة!</string>
+    <string name="btn_Submit">إرسال</string>
+    <string name="txt_Add_images_1st_one_equired">ضع بعض الصور ( على الاقل واحدة )</string>
+    <string name="txt_Video">فيديو</string>
+    <string name="txt_DETAILS">تفاصيل</string>
+    <string name="txt_Category">صنف:</string>
+    <string name="btn_Choose_one">إختر واحدة...</string>
+    <string name="txt_Title_of_the_item_youre_selling">عنوان النموذج الذى تقوم ببيعه</string>
+    <string name="txt_Price">السعر: </string>
+    <string name="txt_Condition">الشروط: </string>
+    <string name="txt_Title">العنوان :</string>
+    <string name="txt_New">جديد</string>
+    <string name="txt_Used">مستخدم</string>
+    <string name="txt_Description">الوصف:</string>
+    <string name="txt_Set_priceforyouritem">ضع سعرا لمنتجك</string>
+    <string name="txt_Type_description_of_your_item">ضع وصفا لمنتجك</string>
+    <string name="btn_Delete_Item">حذف منتج</string>
+    <string name="txt_Choose_location_optional">اختر موقع (ليس إلزاميا)</string>
+    <string name="txt_default">إذا لم تختر موقع سيتم وضع موقع إفتراضى</string>
     <!--     sell_edit_item.xml & class done        -->
 
     <!--     sendfeedback.xml & class done        -->
-    <string name="alert_to">to @</string>
-    <string name="alert_Yo">You must rate at least 1 star and write a show review!</string>
-    <string name="alert_Your_feedback_has_been_sent">Your feedback has been sent!</string>
-    <string name="btn_Send_Feedback">Send Feedback</string>
-    <string name="btn_TAP_A_DOT_TO_RATE">TAP A DOT TO RATE</string>
-    <string name="btn_WRITE_A_SHORT_REVIEW">WRITE A SHORT REVIEW</string>
-    <string name="edt_username">username</string>
+    <string name="alert_to">إلى @</string>
+    <string name="alert_Yo">يجب تقييم ولو على الاقل نجمة واحدة وكتابة نبذة عن ما رأيت</string>
+    <string name="alert_Your_feedback_has_been_sent">تم إرسال ما قمت بكتابته</string>
+    <string name="btn_Send_Feedback">إرسال رأيك</string>
+    <string name="btn_TAP_A_DOT_TO_RATE">إضغط نقطة للتقيم</string>
+    <string name="btn_WRITE_A_SHORT_REVIEW">كتابة رأى مختصر</string>
+    <string name="edt_username">اسم المستخدم</string>
     <!--     sendfeedback.xml & class done        -->
+
+    <!--     sign_up.xml & class done        -->
+    <string name="alert_You_must_fill_all_the_fields_to_Sign_Up">يجب ملئ جميع الحقول لتسجيل الدخول!</string>
+    <string name="alert_You_must_accept_out_Terms_of_Service_in_order_to_sign_up">يجب عليك الموافقة على شروط الخدمة لتسجيل الدخول!</string>
+    <string name="edt_choose_username">إختر اسم المستخدم</string>
+    <string name="edt_choose_password">إختر كلمة مرور</string>
+    <string name="edt_type_your_email_address">اكتب عنوان بريدك الالكترونى</string>
+    <string name="btn_I_agree_to_Terms_Of_Service">انا اوافق على شروط الخدمة</string>
+    <string name="btn_Sign_Up">تسجيل دخول</string>
+    <!--     sign_up.xml & class done        -->
+
+    <!--     sort_by.xml & class done        -->
+    <string name="btn_Cancel">الغاء</string>
+    <string name="btn_Sort_By">ترتيب حسب</string>
+    <string name="alert_Select_an_option_or_tap_Cancel">إختر شئ ما او اضغط إلغاء</string>
+    <!--     sort_by.xml & class done        -->
+
+    <!--     terms_of_use.xml & class done        -->
+    <string name="alert_Terms_of_Use">شروط الاستخدام</string>
+    <!--     terms_of_use.xml & class done        -->
+
+    <!--     watch_video.xml & class done        -->
+    <string name="txt_Watch_Video">مشاهدة فيديو</string>
+    <!--     watch_video.xml & class done        -->
+
+    <!--     wizard.xml & class done        -->
+    <string name="btn_Sign_up_or_Login_in_with_Email">تسجيل دخول عن طريق البريد الالكترونى</string>
+    <string name="btn_By_signing_up_you_agree_to_our_Terms_of_Service">بتسجيل دخولك انت توافق على شروط الخدمة</string>
+    <string name="alert_Do_you_accept_our_Terms_of_Service">هل انت موافق على شروط الخدمة ؟</string>
+    <string name="alert_Yes">نعم</string>
+    <string name="alert_Read_Terms_of_Service">قراءة شروط الخدمة</string>
+    <!--     wizard.xml & class done        -->
+
+    <!--     user_profile.xml & class done        -->
+    <string name="alert_Youve_blocked_this_User_you_will_no_longer_get_Chat_messages_from">لقد قمت بحظر هذا المستخدم ولن تستطيع استقبال رسائل منه </string>
+    <string name="alert_Youve_unblocked">لقد قمت بإلغاء حظر</string>
+    <string name="alert_This_user_has_not_provided_Bio_yet">هذا المستخدم لم يقم بكتابة نبذة عنه حتى الان</string>
+    <string name="alert_Loading_ads">جارى تحميل الاعلان...</string>
+    <string name="txt_Check_Feedbacks">نظرة على الاراء</string>
+    <string name="txt_ADS_POSTED">تم إضافة اعلان</string>
+    <!--     user_profile.xml & class done        -->
+
+    <!--     cell_home.xml done        -->
+    <string name="txt_LOADING">جارى التحميل...</string>
+    <string name="txt_johndoe">johndoe</string>
+    <string name="txt__loading">جارى التحميل...</string>
+    <!--     cell_home.xml done        -->
+
+    <!--     wizard.xml done        -->
+    <string name="txt_sell_quickly">SELL QUICKLY, CHAT TO BUY nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</string>
+    <string name="txt_nlorm">nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</string>
+    <string name="txt_nlorm_list">LIST YOUR ITEM IN NO TIME nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </string>
+    <string name="txt_privately">PRIVATELY TALK TO SELLERS nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </string>
+    <!--     wizard.xml done        -->
 
 </resources>

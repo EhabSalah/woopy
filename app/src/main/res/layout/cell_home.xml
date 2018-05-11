@@ -27,7 +27,7 @@
         android:scaleType="centerCrop" />
 
     <TextView
-        android:text="LOADING..."
+        android:text="@string/txt_LOADING"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/chCatNameTxt"

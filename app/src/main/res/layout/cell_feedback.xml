@@ -17,7 +17,7 @@
         android:layout_width="80dp"/>
 
     <TextView
-        android:text="loading..."
+        android:text="@string/txt_loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/feedsByDateTxt"
@@ -31,7 +31,7 @@
         android:singleLine="true"/>
 
     <TextView
-        android:text="loading..."
+        android:text="@string/txt_loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/feedsAdTitleTxt"
@@ -45,7 +45,7 @@
         android:maxLines="1"/>
 
     <TextView
-        android:text="loading..."
+        android:text="@string/txt_loading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/feedsAdTitleTxt"

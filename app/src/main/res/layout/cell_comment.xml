@@ -14,7 +14,7 @@
         android:layout_marginBottom="8dp"/>
 
     <TextView
-        android:text="loading..."
+        android:text="@string/txt_loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/cCommAvatarImg"
@@ -26,7 +26,7 @@
         android:layout_marginLeft="5dp"/>
 
     <TextView
-        android:text="loading..."
+        android:text="@string/txt_loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/cCommAvatarImg"
@@ -37,7 +37,7 @@
         android:layout_alignEnd="@+id/cCommDateTxt"/>
 
     <TextView
-        android:text="loading..."
+        android:text="@string/txt_loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/cCommUsernameTxt"

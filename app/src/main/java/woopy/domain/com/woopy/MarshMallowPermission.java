@@ -82,7 +82,7 @@ public class MarshMallowPermission {
     public void requestPermissionForLocation() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(activity, Manifest.permission.ACCESS_FINE_LOCATION)) {
             // Toast.makeText(activity, "Location permission is needed to search Ads nearby your location. Please enable Location in App Settings.", Toast.LENGTH_LONG).show();
-            Configs.simpleAlert("Location permission is needed to search Ads nearby your location. Please enable Location in App Settings, otherwise you'll get Ads only from New York City.", activity);
+            Configs.simpleAlert(String.valueOf(R.string.alert_location_permission), activity);
         } else {
             ActivityCompat.requestPermissions(activity, new String[]{ Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         }

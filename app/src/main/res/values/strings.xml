@@ -75,7 +75,7 @@
     <string name="toast_You_must_be_logged_in_to_like_this_ad_want_to_login_now">You must be logged in to like this Ad. Want to login now?</string>
     <string name="toast_liked_your_ad"> liked your Ad: </string>
     <string name="toast_geocoder_not_present">Geocoder not present!</string>
-    <string name="toast_watch_video">"Video: Watch video"</string>
+    <string name="toast_watch_video">Video: Watch video</string>
     <string name="toast_Video">Video: N/A</string>
     <string name="toast_you_must_be_logged_in_to_comment_want_to_login_now">You must be logged in to comment. Want to Login now?</string>
     <string name="toast_you_must_be_logged_in_to_send_a_feedback_want_to_login_now">You must be logged in to send a feedback. Want to login now?</string>
@@ -203,6 +203,7 @@
     <string name="toast_External_Storage_permission_needed_Please_allow_in_App_Settings_for_additional_functionality">External Storage permission needed. Please allow in App Settings for additional functionality.</string>
     <string name="toast_External_Storage_permission_needed_Please_allow_in_App_Settings_for_additional_functionalit">External Storage permission needed. Please allow in App Settings for additional functionality.</string>
     <string name="toast_Camera_permission_needed_Please_allow_in_App_Settings_foradditional_functionality">Camera permission needed. Please allow in App Settings for additional functionality.</string>
+    <string name="alert_location_permission">Location permission is needed to search Ads nearby your location. Please enable Location in App Settings, otherwise you will get Ads only from New York City.</string>
     <!--     permissions.xml & class done        -->
 
     <!--     my_likes.xml & class done        -->
@@ -303,5 +304,26 @@
     <string name="alert_Read_Terms_of_Service">Read Terms of Service</string>
     <!--     wizard.xml & class done        -->
 
+    <!--     user_profile.xml & class done        -->
+    <string name="alert_Youve_blocked_this_User_you_will_no_longer_get_Chat_messages_from">You have blocked this User, you will no longer get Chat messages from </string>
+    <string name="alert_Youve_unblocked">You have unblocked </string>
+    <string name="alert_This_user_has_not_provided_Bio_yet">This user has not provided a Bio yet</string>
+    <string name="alert_Loading_ads">Loading ads...</string>
+    <string name="txt_Check_Feedbacks">Check Feedbacks</string>
+    <string name="txt_ADS_POSTED">ADS POSTED</string>
+    <!--     user_profile.xml & class done        -->
+
+    <!--     cell_home.xml done        -->
+    <string name="txt_LOADING">LOADING...</string>
+    <string name="txt_johndoe">johndoe</string>
+    <string name="txt__loading">loading...</string>
+    <!--     cell_home.xml done        -->
+
+    <!--     wizard.xml done        -->
+    <string name="txt_sell_quickly">SELL QUICKLY, CHAT TO BUY nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</string>
+    <string name="txt_nlorm">nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</string>
+    <string name="txt_nlorm_list">LIST YOUR ITEM IN NO TIME nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </string>
+    <string name="txt_privately">PRIVATELY TALK TO SELLERS nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </string>
+    <!--     wizard.xml done        -->
 
 </resources>
